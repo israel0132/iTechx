@@ -1,0 +1,1225 @@
+.w3-sidebar a {font-family: "Roboto", sans-serif}
+body,h1,h2,h3,h4,h5,h6,.w3-wide {font-family: "Montserrat", sans-serif;}
+
+body {
+  font-family: 'poppins', Arial, Helvetica, sans-serif !important;
+  margin: 0;
+  padding: 0;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+
+.header {
+display: flex;
+position: fixed;
+top: 0;
+right: 0;
+z-index: 1000;
+left: 0;
+justify-content: space-between;
+align-items: center;
+background-color: white; /* Blue brand color */
+padding: 0px 20px;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+color: #0055cc;
+height: 50px;
+border-bottom-right-radius: 6px;
+border-bottom-left-radius: 6px;
+}
+
+.header h2 {
+font-size: 24px;
+font-weight: bold;
+margin: 0;
+background-color: white;
+padding-left: 15px;
+color: #0055cc;
+
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.header:hover h2 {
+color: #00f7ff;
+}
+.dark-mode .header:hover h2 {
+color: #00f7ff; 
+}
+
+.header img {
+border-radius: 50%;
+background-color: white;
+}
+
+.header .icons {
+display: flex;
+align-items: center;
+}
+
+.header .icons i {
+margin-left: 15px;
+font-size: 22px;
+cursor: pointer;
+transition: color 0.3s ease;
+}
+
+.header .icons i:hover {
+color: #00f7ff; /* Gold color on hover */
+}
+
+.header a {
+color: white;
+text-decoration: none;
+padding: 5px;
+}
+
+.header a:hover {
+color: #ffffff;
+}
+i {
+color: #0055cc;
+}
+/* Make sure the header fits well on small screens */
+@media screen and (max-width: 600px) {
+.header h2 {
+    font-size: 18px;
+}
+.header .icons i {
+    font-size: 18px; /* Smaller icons for smaller screens */
+}
+.header img {
+    width: 30px; /* Smaller logo */
+}
+}
+
+/* Dark mode styles 
+img {
+background-color: #0047ab !important;
+}
+body {
+background-color: #0055cc !important;
+}
+.gadget {
+background-color: #001836 !important;
+color: white !important;
+} */
+/* Other dark mode specific styles can be added here */
+/* Dark mode styles */
+.dark-mode {
+background-color: #00193b;
+color: #ffffff;
+}
+
+.dark-mode .header {
+background-color: #0055cc; /* Darker header */
+color: #ffffff;
+}
+
+.dark-mode .header h2 {
+color: #ffffff;
+background-color: #0055cc;
+}
+.dark-mode img {
+background-color: #0047ab !important;
+}
+.dark-mode .gadget {
+background-color: #001836 !important;
+color: white !important;
+}
+.dark-mode i {
+color: white;
+}
+.dark-mode .logo {
+background-color: #0055cc !important;
+}
+.dark-mode .header-logo {
+display: block;
+}
+
+/*************************************/
+.dark-mode .sidebar {
+height: 100vh;
+width: 280px;
+max-width: 100%; /* Limits sidebar width */
+position: fixed;
+top: 0;
+left: -100%; /* Hidden by default */
+background-color: #0047ab;
+color: white;
+transition: all 0.6s ease-in-out;
+z-index: 1001;
+overflow-y: auto;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.dark-mode .sidebar.open {
+left: 0; /* Slide in */
+}
+
+/* Sidebar Header */
+.dark-mode .sidebar-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 12px 10px;
+height: 50px;
+background-color: #0055cc;
+box-shadow: 0 1px 6px #0047ab;
+
+}
+
+.dark-mode .logo-circle {
+width: 40px;
+height: 40px;
+background-color: rgba(255, 255, 255, 0) !important;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 20px;
+color: #0047ab;
+overflow: hidden;
+}
+
+.dark-mode .sidebar h3 {
+font-size: 1.2rem;
+font-weight: bold;
+}
+
+/* Sidebar Links */
+.dark-mode .sidebar a {
+text-decoration: none;
+color: white;
+display: flex;
+align-items: center;
+padding: 15px 20px;
+font-size: 16px;
+transition: background 0.3s, border-left 0.3s;
+border-left: 2px #b4cbeb;
+}
+
+.dark-mode .sidebar a:hover {
+background-color: #0066cc;
+border-left: 3px solid #b4cbeb;
+}
+
+.dark-mode .icon-circle {
+width: 30px;
+height: 30px;
+background-color: #0047ab;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-right: 10px;
+margin-left: 10px;
+left: 40px;
+color: #0047ab;
+}
+
+.dark-mode .category {
+cursor: pointer;
+}
+
+.dark-mode .category i {
+margin-left: auto;
+transition: 0.3s;
+}
+
+.dark-mode .subcategory,
+.sub-subcategory {
+display: none;
+background: #0055cc;
+padding-left: 15px;
+}
+
+.dark-mode .sub-subcategory {
+background: #003f8c;
+}
+
+.dark-mode .open > .subcategory {
+display: block;
+}
+
+.dark-mode .open > i {
+transform: rotate(90deg);
+}
+
+/* Close Button */
+.dark-mode .close-btn {
+font-size: 20px;
+cursor: pointer;
+margin-left: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+.dark-mode .sidebar {
+width: 75%; /* Take 75% of the screen on small screens */
+}
+}
+
+@media (min-width: 601px) {
+.dark-mode .sidebar {
+left: 0; /* Always visible on large screens */
+}
+
+.dark-mode .toggle-btn {
+display: none;
+}
+}
+
+/* Custom Scrollbar */
+.dark-mode .sidebar::-webkit-scrollbar {
+width: 8px;
+}
+
+.dark-mode .sidebar::-webkit-scrollbar-thumb {
+background: white;
+border-radius: 5px;
+}
+
+
+/* Other dark mode specific styles can be added here */
+
+/***************************************************************/
+
+.carousel {
+  position: relative;
+  max-width: 600px;
+  margin: 20px auto;
+  overflow: hidden;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-item {
+  min-width: 100%;
+}
+
+.carousel img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.carousel-control {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.7);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+.ob {
+border: 1px solid #e0e0e0;
+padding: 3px;
+margin: 2px;
+}
+.gadget {
+padding-right: -20px;
+background: #fff;
+border-radius: 9px;
+padding: 5px;
+padding-top: 0px;
+margin-bottom: 20px;
+position: relative; /* Position relative for child positioning */
+box-shadow: 0px 3px 6px 1px #0047ab1c;
+}
+.gadget:hover {
+background-color: #0047ab;
+color: white;
+box-shadow: 0px 2px 4px 1px #0047abb6;
+}
+.gadget h3, .gadget p {
+display: block; /* Hide names and specifications */
+margin-top: 0px;
+}
+button {
+padding: -5px 6px !important;
+background-color: #b4cbeb; /* Change to blue hue */
+color: white;
+border: none;
+border-radius: 5px;
+
+cursor: pointer;
+
+}
+.select-gadget {
+width: 48%;
+background-color: #0055cc;
+border: 0px solid #475d8600;
+}
+.select-gadget:hover {
+border: 0px solid #0047ab;
+color: #0047ab;
+}
+.select-gadget:hover::after {
+content: " +1";
+}
+.remove-gadget {
+background-color: #f4f7ff;
+border: 0px solid #f4f7ff;
+color: black;
+width: 48%;
+}
+.dark-mode .remove-gadget {
+background-color: #001836;
+border: 0px solid #f4f7ff;
+color: black;
+width: 48%;
+}
+.remove-gadget:hover::after {
+content: " -1";
+}
+.dark-mode .gadget {
+box-shadow: 0px 1px 4px #0066ff1e;
+}
+.remove-gadget:hover {
+background-color: #f4f7ff;
+color: #df0025 !important;
+border: 0px solid #0047ab;
+}
+.dark-mode .remove-gadget:hover {
+background-color: #00000000;
+color: rgb(255, 97, 97) !important;
+}
+button:hover {
+background-color: #fff; /* Darker shade of blue on hover */
+}
+#whatsapp-link {
+display: inline-block;
+margin-top: 20px;
+padding: 10px 20px;
+background-color: #007bff; /* Blue color for check out */
+color: white;
+text-decoration: none;
+border-radius: 5px;
+}
+.dark-mode #whatsapp {
+background-color: #007bff !important;
+}
+#whatsapp-link:hover {
+background-color: #0056b3; /* Darker shade of blue on hover */
+}
+#calculator {
+position: fixed;
+top: 40px;
+right: 10px;
+width: 140px;
+max-height: 300px;
+
+background: #fff;
+padding: 5px;
+border-radius: 5px;
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+overflow-y: scroll;
+display: none; /* Initially hidden */
+cursor: move; /* Change cursor to indicate draggable */
+}
+.dark-mode #calculator {
+background-color: #0044ab;
+color: white;
+}
+#order-summary {
+width: 100%;
+max-height: 200px;
+font-size: 12px;
+}
+
+.product-name {
+color: black; /* Product names in black */
+}
+.dark-mode .product-name {
+color: white;
+}
+.product-quantity {
+color: gray; /* Quantity in gray */
+}
+.dark-mode .product-quantity {
+color: rgba(209, 209, 255, 0.76);
+}
+#total-price {
+font-weight: bold;
+font-size: 14px;
+margin-top: 10px;
+}
+.cancel-icon {
+text-align: right;
+cursor: pointer;
+color: gray;
+font-size: 18px;
+display: none; /* Initially hidden */
+margin-bottom: -20px;
+padding: 7px;
+}
+.cancel-icon:hover {
+color: rgb(243, 83, 83);
+}
+.iaas {
+color: #007bff;
+}
+
+.ono {
+visibility: hidden;
+}
+#nott {
+margin: 0;
+padding: 0;
+}
+/*************************************************/
+.icon {
+cursor: pointer;
+margin: 20px;
+font-size: 24px;
+color: #4460AA;
+}
+
+form {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+max-width: 400px;
+width: 100%;
+position: fixed;
+height: 100%;
+overflow: scroll;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+z-index: 100;
+display: none; /* Hidden by default */
+}
+.dark-mode form {
+background-color: #0044ab;
+color: white;
+}
+
+h2 {
+text-align: center;
+color: #4460AA;
+margin-bottom: 20px;
+font-weight: 500;
+}
+.dark-mode h2 {
+color: white;
+}
+.field {
+margin-bottom: 9px;
+}
+
+.field label {
+display: block;
+font-size: 14px;
+color: #555;
+margin-bottom: 6px;
+}
+.dark-mode .field label {
+color: rgb(219, 219, 219);
+}
+
+.info {
+display: block;
+font-size: 14px;
+color: #383838;
+text-align: center;
+}
+.dark-mode .info {
+color: #75b7ff
+}
+
+.info a {
+color: #4460AA;
+}
+.dark-mode .info a {
+color: white;
+}
+
+.field input {
+width: 100%;
+padding: 10px;
+font-size: 14px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+}
+.dark-mode .field input {
+border: 1px solid #007bff;
+background-color: #0047ab;
+color: white;
+}
+
+input[type="submit"] {
+display: block;
+width: 100%;
+padding: 10px;
+font-size: 16px;
+background-color: #4460AA;
+color: #fff;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+background-color: #365192;
+}
+
+input[type="submit"]:active {
+transform: scale(0.98);
+}
+
+.field input:focus {
+border-color: #4460AA;
+outline: none;
+}
+
+/* Close button styles */
+.close-btn {
+position: absolute;
+top: 10px;
+right: 10px;
+font-size: 18px;
+cursor: pointer;
+color: #888;
+}
+
+.close-btn:hover {
+color: #f00;
+}
+
+/* Background overlay */
+#overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+display: none; /* Hidden by default */
+z-index: 99;
+}
+
+/* Visitor count */
+#visitor-coufnt {
+text-align: center;
+margin: 20px;
+font-size: 18px;
+color: #4460AA;
+}
+
+.ndon {
+display: none;
+}
+
+/* Stored data page */
+#stored-data {
+background-color: #fff;
+padding: 20px;
+border-radius: 8px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+max-width: 400px;
+width: 100%;
+overflow: scroll; 
+height: 100%;
+position: fixed;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+display: none;
+z-index: 100;
+}
+.dark-mode #stored-data {
+background-color: #0047ab;
+color: white;
+}
+
+.stored-data-header {
+text-align: center;
+color: #4460AA;
+margin-bottom: 20px;
+}
+
+.data-field {
+margin-bottom: 10px;
+font-size: 16px;
+}
+
+.close-stored-icon {
+position: absolute;
+top: 10px;
+right: 20px;
+font-size: 20px;
+color: #888;
+cursor: pointer;
+}
+
+.close-stored-icon:hover {
+color: #f00;
+}
+
+#reset-btn {
+display: none;
+margin-top: -580px;
+text-align: center;
+padding: 5px;
+background-color: #d10000;
+color: white;
+border: none;
+cursor: pointer;
+}
+.dark-mode #reset-btn {
+background-color: white;
+color: black;
+}
+hr {
+color: #eaeef5;
+}
+
+.two:hover {
+font-size: 16px;
+text-decoration: underline blue;
+}
+.nat {
+background-color: black;
+font-size: 13px;
+color: white;
+margin-top: -50px;
+display: none;
+}
+.hold:hover > .nat {
+display: block;
+}
+.dark-mode .heads {
+color: #00f7ff !important;
+}
+.dark-mode p {
+color: white !important;
+}
+.dark-mode .two {
+color: #00f7ff !important;
+}
+/*************************************************/
+
+
+
+.icon-container {
+position: fixed;
+bottom: 20px; /* Adjust as needed */
+right: 20px;  /* Adjust as needed */
+display: flex;
+z-index: 100;
+flex-direction: column;
+align-items: center;
+}
+
+.money-icon, .whatsapp-icon {
+border-radius: 50%; /* Ensure icons are round */
+padding: 15px; /* Adjust as needed */
+margin: 5px;   /* Adjust spacing between icons */
+font-size: 24px; /* Adjust icon size */
+transition: background-color 0.3s ease;
+text-decoration: none; /* Remove underline */
+display: flex;
+justify-content: center; /* Center icon */
+align-items: center; /* Center icon */
+width: 50px; /* Set a width for round shape */
+height: 50px; /* Set a height for round shape */
+}
+
+.money-icon {
+background-color: #FFD700; /* Gold color for money icon */
+visibility: hidden;
+
+}
+
+.whatsapp-icon {
+background-color: #25D366; /* WhatsApp color */
+}
+
+.whatsapp-icon:hover {
+background-color: #128C7E; /* Darker green for WhatsApp on hover */
+}
+
+.money-icon:hover {
+background-color: purple; /* Change to purple on hover */
+animation: changeColor 0.1s forwards; /* Animation on hover */
+}
+
+@keyframes changeColor {
+0% {
+  background-color: #FFD700; /* Start color */
+}
+50% {
+  background-color: purple; /* Middle color */
+}
+100% {
+  background-color: #FFD700; /* End color */
+}
+}
+
+
+/*******************************************/
+
+/* Sidebar Styles */
+.sidebar {
+height: 100vh;
+width: 280px;
+max-width: 100%; /* Limits sidebar width */
+position: fixed;
+top: 0;
+left: -100%; /* Hidden by default */
+background-color: #fff;
+color: #0047ab;
+transition: all 0.6s ease-in-out;
+z-index: 1001;
+overflow-y: auto;
+box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+border-top-right-radius: 5px;
+border-bottom-right-radius: 5px;
+}
+
+.sidebar.open {
+left: 0; /* Slide in */
+}
+
+/* Sidebar Header */
+.sidebar-header {
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 12px 10px;
+height: 50px;
+background-color: #fff;
+box-shadow: 0 1px 6px rgba(64, 128, 153, 0.363);
+border-radius: 5px;
+position: fixed;
+width: 280px;
+
+
+}
+.sidebar-header:hover h3 {
+color: #00f7ff;
+}
+.dark-mode .sidebar-header:hover h3 {
+color: #00f7ff; 
+}
+
+.logo-circle {
+width: 40px;
+height: 40px;
+background-color: rgba(255, 255, 255, 0) !important;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 20px;
+color: #0047ab;
+overflow: hidden;
+}
+
+.sidebar h3 {
+font-size: 1.2rem;
+font-weight: bold;
+}
+
+/* Sidebar Links */
+.sidebar a {
+text-decoration: none;
+color: #0047ab;
+display: flex;
+align-items: center;
+padding: 15px 20px;
+font-size: 16px;
+transition: background 0.3s, border-left 0.3s;
+border-left: 2px #b4cbeb;
+}
+
+.sidebar a:hover {
+background-color: #fcfcfc;
+border-left: 3px solid #b4cbeb;
+}
+
+.icon-circle {
+width: 30px;
+height: 30px;
+background-color: #f5f5f5;
+border-radius: 50%;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-right: 10px;
+margin-left: 10px;
+left: 40px;
+color: #0047ab;
+}
+
+.category {
+cursor: pointer;
+}
+
+.category i {
+margin-left: auto;
+transition: 0.3s;
+}
+
+.subcategory,
+.sub-subcategory {
+display: none;
+background: #f3f3f3;
+padding-left: 15px;
+}
+
+
+.open > .subcategory {
+display: block;
+}
+
+.open > i {
+transform: rotate(90deg);
+}
+
+/* Close Button */
+.close-btn {
+font-size: 20px;
+cursor: pointer;
+margin-left: auto;
+}
+
+/* Responsive Styles */
+@media (max-width: 600px) {
+.sidebar {
+  width: 75%; /* Take 75% of the screen on small screens */
+}
+.sidebar-header {
+  width: 75%;
+}
+}
+
+@media (min-width: 601px) {
+.sidebar {
+  left: 0; /* Always visible on large screens */
+}
+
+.toggle-btn {
+  display: none;
+}
+}
+
+/* Custom Scrollbar */
+.sidebar::-webkit-scrollbar {
+width: 8px;
+}
+
+.sidebar::-webkit-scrollbar-thumb {
+background: white;
+border-radius: 5px;
+}
+
+.gadget {
+text-align: center;
+background-color: #f4f7ff;
+font-family: 'poppins';
+border-top: none;
+border-top-right-radius: 0%;
+border-top-left-radius: 0%;
+}
+
+.carousel-control {
+border-radius: 50% !important;
+width: 30px;
+}
+
+
+/*****************************************************************/
+/* Reset margins and paddings for body and html */
+body, html {
+margin: 0;
+padding: 0;
+overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Slideshow container styles */
+.slideshow-container {
+max-width: 100%;
+position: relative;
+margin: auto;
+margin-top: 20px; /* Add a 20px top margin */
+overflow: hidden; /* Hide any overflow from images */
+}
+
+/* Hide all images by default */
+.mySlides {
+display: none;
+}
+
+/* Image style specifically for slideshow images */
+.slideshow-container img {
+width: 100% !important; /* Force width to 100% */
+height: auto; /* Maintain aspect ratio */
+display: block; /* Remove any inline spacing */
+}
+
+/* Force images to cover 100% width on small devices */
+@media only screen and (max-width: 768px) {
+.slideshow-container img {
+  width: 100% !important; /* Force width to 100% */
+  height: auto; /* Maintain aspect ratio */
+}
+}
+
+/* Caption text */
+.w3-display-topleft {
+position: absolute;
+top: 0;
+left: 0;
+padding: 24px 48px;
+color: white;
+}
+
+.w3-display-topleft {
+padding: 2px 6px;
+}
+
+.w3-bar-item {
+padding: 2px !important;
+}
+
+.w3-bar-item:hover {
+background-color: #00000000 !important;
+color: #00f7ff !important;
+}
+
+/* Additional styles for header logo if necessary */
+header img {
+width: auto; /* Prevent header logo from stretching */
+height: auto; /* Maintain header logo aspect ratio */
+max-width: 100%; /* Limit logo size for responsive design */
+}
+
+/*****************************************************************/
+.fa-whatsapp {
+font-size: 30px;
+color: white;
+}
+.fa-whatsapp:hover {
+color: #0044ab;
+}
+
+
+/***********************************************/
+
+/***********************************************/
+
+.w3-container, .w3-panel {
+padding: 0px 0px;
+margin-bottom: 0px;
+}
+.w3-row, .product-slideshow {
+padding: 1px 10px;
+}
+.slideshow-image {
+object-fit: contain;
+height: 150px;
+border-top-left-radius: 5px;
+background-color: rgb(253, 253, 253);
+border-top-right-radius: 5px;
+box-shadow: 0px 0px 6px 1px #0047ab11;
+}
+.slideshow-image:hover {
+background-color: #fff;
+box-shadow: 0px 0px 6px 1px #0047ab1c;
+}
+
+.carousel-item {
+height: 200px;
+object-fit: cover;
+}
+.mySlides > img {
+border-radius: 5px;
+height: 400px;
+object-fit: cover;
+} 
+
+/********************************************************/
+.circle-btn {
+width: 50px;
+height: 50px;
+background-color: #ffffff;
+box-shadow: 0px 0px 4px 1px rgba(161, 161, 161, 0.7);
+border-radius: 50%;
+border: none;
+position: absolute;
+bottom: 90px;
+right: 25px;
+display: flex;
+z-index: 1009;
+justify-content: center;
+align-items: center;
+cursor: pointer;
+transition: background-color 0.1s ease, color 0.3s ease;
+outline: none;
+user-select: none;
+-webkit-tap-highlight-color: transparent;
+}
+.circle-btn:hover {
+background-color: #0055cc;
+}
+.circle-btn i {
+font-size: 24px;
+color: #0055cc; /* Default color */
+}
+.circle-btn:hover i {
+color: white; /* Change icon color on hover */
+}
+.hidden-btn {
+display: none;
+}
+.fade-in {
+animation: fadeInEffect 3s ease-in forwards;
+}
+.disabled-btn {
+background-color: black;
+cursor: not-allowed;
+}
+.disabled-btn i {
+color: white;
+}
+@keyframes fadeInEffect {
+0% {
+  background-color: white;
+}
+100% {
+  background-color: #0055cc;
+}
+}
+.dark-mode footer, .footer {
+background-color: #0047ab !important;
+color: white !important;
+}
+/********************************************************/
+/* Default light mode */
+#header-logo {
+content: url("../assets/images/logo-light.png");
+}
+
+/* Dark mode */
+body.dark-mode #header-logo {
+content: url("../assets/images/logo-dark.png");
+}
+/*******************************************************/
+/* Default light mode */
+#sider-logo {
+content: url("../assets/images/logo-light.png");
+}
+
+/* Dark mode */
+body.dark-mode #sider-logo {
+content: url("../assets/images/logo-dark.png");
+}
+.forms {
+color: #0044ab;
+}
+.dark-mode .forms {
+color: white;
+}
+.dark-mode .whatsapp-icon {
+background-color: #0044ab;
+}
+.dark-mode .whatsapp-icon:hover {
+background-color: white;
+}
+.dark-mode .whatsapp-icon:hover .fa-whatsapp {
+color: #0044ab;
+}
+.dark-mode .iaas {
+color: white;
+}
+.gadget p {
+font-family: "poppins", Arial, Helvetica, sans-serif !important;
+}
+.fa-home:hover {
+color:#00f7ff !important;
+}
+/********************************/
+/* Footer styling */
+
+/* Star container */
+.star-container {
+text-align: center;
+color: blue;
+}
+
+/* Rotating star */
+.star {
+width: 50px;
+height: 50px;
+margin: 0 auto;
+background-color: rgb(0, 38, 255);
+clip-path: polygon(
+50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 
+50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%
+);
+animation: rotate 5s linear infinite;
+transition: all 5s;
+}
+.star:hover {
+animation: rotate 0.00009s linear infinite;
+background-color: #00f7ff !important;
+}
+.dark-mode .star {
+background-color: white;
+color: white;
+}
+
+/* Text styling */
+.quality-text {
+font-size: 18px;
+margin-top: 10px;
+}
+
+/* Animation */
+@keyframes rotate {
+from {
+transform: rotate(0deg);
+}
+to {
+transform: rotate(360deg);
+}
+}
+
+/* Dark mode styling */
+@media (prefers-color-scheme: dark) {
+
+
+.star {
+background-color: blue;
+border-color: white;
+}
+
+.quality-text {
+color: white;
+}
+}
