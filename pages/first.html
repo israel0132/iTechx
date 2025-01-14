@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T4J53146GL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T4J53146GL');
+</script>
+
+    <title>first</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Israel Chidozie">
+    <meta name="company" content="isubz.com.ng">
+    <meta http-equiv="refresh" content="">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>
+    </style>
+
+<body>
+<iframe id="audioFrame" width="300" height="60" src="" frameborder="0" allow="autoplay" style="display: none;"></iframe>
+<!----------------------------------------------------->
+<div class="icon-container">
+  <!-- Dollar Icon -->
+  
+  
+  <!-- WhatsApp Icon -->
+  <a href="https://wa.me/your-number" class="whatsapp-icon circle-button play-audio" data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1" title="Money" data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp" onclick="changeColorAndPosition(this.parentElement)" style="visibility: visible !important;" ></i>
+  </a>
+</div>
+
+<!------------------------------------------->
+<div class="circle-btn ad-link play-audio" data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1"  onclick="changeColorAndMove(this)">
+  <i class="fas fa-dollar-sign"></i>
+</div>
+<!------------------------------------------------->
+<!-- Background overlay -->
+<div id="overlay" onclick="hideForm()"></div>
+
+<!-- Registration form -->
+<form id="form" style="z-index: 1004;">
+    <span class="close-btn play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1" onclick="hideForm()"><b>×</b></span>
+    <h3 style="font-family: sans-serif; text-align: center; color: blue;" class="give">iSubz Giveaway</h3>
+    <div class="field">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter your full name">
+    </div>
+    <div class="field">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email">
+    </div>
+    <div class="field">
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" id="phone" placeholder="Enter your phone number">
+    </div>
+    <div class="field">
+        <label for="isubz">iSubz Wallet ID</label>
+        <input type="text" name="isubz" id="isubz" placeholder="My iSubz wallet ID">
+    </div>
+    <div class="field">
+        <label for="account">iSubz Funding Account</label>
+        <input type="text" name="account" id="account" placeholder="iSubz bank account NO">
+    </div>
+    <div class="field">
+        <input type="text" name="visi" id="visitor-count-hidden">
+    </div>
+        
+    <input type="submit" id="button" value="Submit">
+    <p class="info">Visit <a href="https://isubz.com.ng/?login"><b>iSubz.com.ng</b></a> to get your iSubz details</p>
+</form>
+
+<!-- Stored Data Section -->
+<div id="stored-data" style="z-index: 1004;">
+    <span class="close-stored-icon play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1" onclick="hideStoredData()">×</span>
+    <h2 style="font-family: sans-serif !important;" class="stored-data-header"><b>iTechx</b></h2>
+    
+    <h4 style="text-align: center; padding-top: 40; font-family: sans-serif">MY PROFILE</h4><hr>
+    <div class="data-field" id="stored-name"></div><hr>
+    <div class="data-field" id="stored-email"></div><hr>
+    <div class="data-field" id="stored-phone"></div><hr>
+    <div class="data-field" id="stored-isubz"></div><hr>
+    <div class="data-field" id="stored-account"></div><hr>
+    <div style="display: none" class="data-field" id="stored-visit-count"></div>
+
+    <div id="visitor-count" class="visitor-count">Error!</div><hr>
+
+    <div style="display: none;" class="data-field" id="stored-points"></div>
+    <p style="font-size: 14px; color: #353535; text-align: center;"><span><b style="color: blue; font-size: 16px" class="heads">Cash In Your Points</b></span><br><br>Resubmit the iSubz giveaway form anytime you want to update your profile or receive a &#8358;CA$# prize for your bonus points in your <a href="https://isubz.com.ng"><b>iSubz.com.ng</b></a> wallet <br><br><span>You earn bonus points whenever you visit, you're online and even more points when you click on ads. Good luck!</span></p>
+   <!-- <h6 style="text-align: center;">Earn Points</h6> -->
+    <p style="font-size: 14px; color: #353535; text-align: center;"></p>
+    <p style="font-size: 14px; color: #353535; text-align: center;" class="hold">
+        <b style="text-decoration: underline;">Note:</b> Your points will reset to 0 whenever you submit the form. Points below 5,000 will not be rewarded. <br>You may lose some points if you leave the site before staying for at least 15 seconds. <br><br>Thanks for joining.</p>
+    <p style="font-size: 14px; color: #353535; text-align: center;" class="two heads"><a style="text-decoration: none;" href="https://isubz.com.ng"><b>Setup isubz wallet</b></a></p>
+  
+    
+    <button id="reset-btn">Reset Points to 0.0</button>
+
+    
+</div>
+<!------------------------------------------------->
+
+
+
+<!-- Sidebar/menu -->
+
+<!-- Sidebar -->
+<nav class="sidebar" id="mySidebar">
+  <div class="sidebar-header">
+    <div class="logo-circle" style="background-color: #00000000 !important;">
+      <img id="sider-logo" src="../assets/images/logo-light.png" alt="Sidebar Logo" style="width: 100%; background:rgba(0, 0, 0, 0) !important"> <!-- Replace with your logo -->
+    </div>
+    <h3 style="margin-right: 100px;">iTechx</h3>
+    <i class="fas fa-times close-btn play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1" onclick="toggleSidebar()"></i>
+  </div>
+
+  <div class="category" onclick="toggleSubMenu(this)" style="margin-top: 60px;">
+    <a href="javascript:void(0)">
+      <span class="icon-circle"><i class="fas fa-laptop" style="margin: 0;"></i></span>Laptops<i class="fas fa-angle-right"></i>
+    </a>
+    <div class="subcategory">
+      <a href="hp.html">HP</a>
+      <a href="dell.html">Dell</a>
+      <a href="lenovo.html">Lenovo</a>
+      <a href="apple.html">Apple</a>
+      <a href="acer.html">Acer</a>
+      <a href="microsoft.html">Microsoft</a>
+      <a href="razer.html">Razer</a>
+      <a href="msi.html">MSI</a>
+      <a href="samsung.html">Samsung</a>
+      <a href="lg.html">LG</a>
+      <a href="aleinware.html">Aleinware</a>
+      <a href="huawei.html">Huawei</a>
+      <a href="vivo.html">Vivo</a>
+    </div>
+  </div>
+
+  <div class="category" onclick="toggleSubMenu(this)">
+    <a href="javascript:void(0)">
+      <span class="icon-circle"><i class="fas fa-mobile-alt" style="margin: 0;"></i></span>Smartphones <i class="fas fa-angle-right"></i>
+    </a>
+    <div class="subcategory">
+      <a href="iphone.html">iPhone</a>
+      <a href="samsung.html">Samsung</a>
+      <a href="oppo.html">Oppo</a>
+      <a href="techo.html">Techo</a>
+      <a href="infinix.html">Infinix</a>
+      <a href="redmi.html">Redmi</a>
+      <a href="itel.html">Itel</a>
+      <a href="nokia.hmtl">Nokia</a>
+    </div>
+  </div>
+
+  <div class="category" onclick="toggleSubMenu(this)">
+    <a href="javascript:void(0)">
+      <span class="icon-circle"><i class="fas fa-tablet-alt" style="margin-left: 0;"></i></span>Tablets <i class="fas fa-angle-right"></i>
+    </a>
+    <div class="subcategory">
+      <a href="#">iPads</a>
+      <a href="#">Android Tablets</a>
+    </div>
+  </div>
+
+  <div class="category" onclick="toggleSubMenu(this)">
+    <a href="javascript:void(0)">
+      <span class="icon-circle"><i class="fas fa-headphones" style="margin: 0;"></i></span>Headphones <i class="fas fa-angle-right"></i>
+    </a>
+    <div class="subcategory">
+      <a href="#">Wireless</a>
+      <a href="#">Noise-Cancelling</a>
+    </div>
+  </div>
+
+  <div class="category" onclick="toggleSubMenu(this)">
+    <a href="javascript:void(0)">
+      <span class="icon-circle"><i class="fas fa-charging-station" style="margin: 0;"></i></span>Powerbanks <i class="fas fa-angle-right"></i>
+    </a>
+    <div class="subcategory">
+      <a href="#">Oraimo</a>
+      <a href="#">ACE ELEC</a>
+    </div>
+  </div>
+
+  <div class="category" onclick="toggleSubMenu(this)">
+    <a href="javascript:void(0)">
+      <span class="icon-circle"><i class="fas fa-plug" style="margin: 0;"></i></span>Cables <i class="fas fa-angle-right"></i>
+    </a>
+    <div class="subcategory">
+      <a href="#">USB-C</a>
+      <a href="#">Lightning</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header>
+  <div class="header">
+      <!-- Home Icon -->
+      <a href="index.html" class="w3-bar-item w3-button">
+          <i class="fa fa-home play-audio" data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1"></i>
+      </a>
+
+      <!-- Logo Image and Title -->
+      <div style="display: flex; align-items: center;">
+          <img id="header-logo" src="../images/logo-light.png" class="logo"
+               alt="iTechx logo" style="width: 40px; margin-right: 10px;">
+          <h2>iTechx</h2>
+      </div>
+
+      <!-- Icons (Gift, User, Dark Mode Toggle, and Menu) -->
+      <div class="icons">
+          <i class="fas fa-gift play-audio" data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1" onclick="showForm()"></i>
+          <i class="fas fa-user play-audio" style="margin-right: 10px;" data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1" onclick="showStoredData()"></i>
+          
+          <!-- Dark Mode Toggle Icon -->
+          <i class="fas fa-moon" id="darkModeToggle" onclick="toggleDarkMode()"></i>
+
+          <!-- Menu Icon -->
+          <a  href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right play-audio" data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1" onclick="toggleSidebar()">
+              <i class="fa fa-bars"></i>
+          </a>
+      </div>
+  </div>
+</header>
+
+
+<!-- Overlay effect when opening sidebar on small screens 
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div> -->
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top: 50px; margin-left: 0px !important;"></div>
+  
+  <!-- Top header -->
+  
+
+  <!-- Image header -->
+  <div class="slideshow-container">
+    <div class="mySlides w3-display-container w3-container">
+      <img src="images\display1.png" alt="Go-Tech"> 
+      <div class="w3-display-topleft w3-text-white">
+        <h1 style="text-shadow: 1px 1px 1px rgba(71, 71, 71, 0.281); opacity: 50%;">GoTechy</h1>
+      </div>
+    </div>
+  
+    <div class="mySlides w3-display-container w3-container">
+      <img src="images\display2.jpg" alt="Image 2">
+      <div class="w3-display-topleft w3-text-white">
+        <h1></h1>
+      </div>
+    </div>
+  
+    <div class="mySlides w3-display-container w3-container">
+      <img src="images\display3.png" alt="Image 3">
+      <div class="w3-display-topleft w3-text-white">
+        <h1></h1>
+      </div>
+    </div>
+  
+    <div class="mySlides w3-display-container w3-container">
+      <img src="images\display4.png" alt="Image 4">
+      <div class="w3-display-topleft w3-text-white">
+        <h1></h1>
+      </div>
+    </div>
+  
+    <div class="mySlides w3-display-container w3-container">
+      <img src="images\logo.png" alt="Image 5">
+      <div class="w3-display-topleft w3-text-white">
+        <h1></h1>
+      </div>
+    </div>
+  </div>
+<!---->
+
+<div class="carousel" id="carousel1">
+  <div class="carousel-inner">
+      <div class="carousel-item"><img src="images\palmpay1.png" alt="Image 1"></div>
+      <div class="carousel-item"><img src="images\ads1.jpg" alt="Image 2"></div>
+      <div class="carousel-item"><img src="images\ads2.jpg" alt="Image 3"></div>
+      <div class="carousel-item"><img src="images\ads3.jpg" alt="Image 4"></div>
+      <div class="carousel-item"><img src="images\ads4.jpg" alt="Image 5"></div>
+      <div class="carousel-item"><img src="images\ads5.jpg" alt="Image 6"></div>
+  </div>
+  <button class="carousel-control prev" onclick="prevSlide('carousel1')">&#10094;</button>
+  <button class="carousel-control next" onclick="nextSlide('carousel1')">&#10095;</button>
+</div>
+<!---->
+
+  <div class="w3-container w3-text-grey">
+    <p style="text-align: center;">Powerbanks | Chargers | Earpices | Cords</p>
+  </div>
+
+  <!-- Product grid -->
+  <div class="w3-row">
+    <div class="w3-col l3 s6">
+      <div class="w3-container product-slideshow">
+          <!-- First image for the product -->
+          <a href="images\oraimo10k2.png" ><img class="slideshow-image" src="images\oraimopb20k1.png" style="width:100%"></a>
+          <!-- Second image for the product -->
+          <a href="images\oraimo10k2.png"><img class="slideshow-image" src="images\oraimopb20k3.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+          <div class="gadget" data-name="Oraimo 20,000mAh" data-spec="Quality." data-price="21000">
+              <p><u>Oraimo 20,000mAh</u><br><b>&#8358;21,000 </b><s style="opacity: 50%;">&#8358;23,000</s></p>
+              <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+              <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+          </div>
+      </div>
+      <div class="w3-container product-slideshow">
+          <!-- First image for the product -->
+          <a href="images\oraimocord2.png" ><img class="slideshow-image" src="images\oraimocord1.png" style="width:100%"></a>
+          <!-- Second image for the product -->
+          <a href="images\oraimocord2.png"><img class="slideshow-image" src="images\oraimocord3.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+          <div class="gadget" data-name="Oraimo 20,000mAh" data-spec="Quality." data-price="21000">
+              <p><u>Oraimo 20,000mAh</u><br><b>&#8358;21,000 </b><s style="opacity: 50%;">&#8358;23,000</s></p>
+              <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+              <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+          </div>
+      </div>
+  </div>
+
+  <div class="w3-col l3 s6">
+    <div class="w3-container product-slideshow">
+        <!-- First image for the product -->
+        <a href="images\display4.png" ><img class="slideshow-image" src="images\iphonecord1.png" style="width:100%"></a>
+        <!-- Second image for the product -->
+        <a href="images\display4.png"><img class="slideshow-image" src="images\iphonecord3.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+        <div class="gadget" data-name="Oraimo 20,000mAh" data-spec="Quality." data-price="21000">
+            <p><u>Oraimo 20,000mAh</u><br><b>&#8358;21,000 </b><s style="opacity: 50%;">&#8358;23,000</s></p>
+            <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+            <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+        </div>
+    </div>
+    <div class="w3-container product-slideshow">
+        <!-- First image for the product -->
+        <a href="images\acelec1.jpg" ><img class="slideshow-image" src="images\acelec3.png" style="width:100%"></a>
+        <!-- Second image for the product -->
+        <a href="images\acelec1.jpg"><img class="slideshow-image" src="images\acelec2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+        <div class="gadget" data-name="Oraimo 20,000mAh" data-spec="Quality." data-price="21000">
+            <p><u>Oraimo 20,000mAh</u><br><b>&#8358;21,000 </b><s style="opacity: 50%;">&#8358;23,000</s></p>
+            <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+            <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+        </div>
+    </div>
+</div>
+
+<div class="w3-col l3 s6">
+  <div class="w3-container product-slideshow">
+      <!-- First image for the product -->
+      <a href="" ><img class="slideshow-image" src="" style="width:100%"></a>
+      <!-- Second image for the product -->
+      <a href=""><img class="slideshow-image" src="" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+      <div class="gadget" data-name="Oraimo 20,000mAh" data-spec="Quality." data-price="21000">
+          <p><u>Oraimo 20,000mAh</u><br><b>&#8358;21,000 </b><s style="opacity: 50%;">&#8358;23,000</s></p>
+          <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+          <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+      </div>
+  </div>
+  <div class="w3-container product-slideshow">
+      <!-- First image for the product -->
+      <a href="" ><img class="slideshow-image" src="" style="width:100%"></a>
+      <!-- Second image for the product -->
+      <a href=""><img class="slideshow-image" src="" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+      <div class="gadget" data-name="Oraimo 20,000mAh" data-spec="Quality." data-price="21000">
+          <p><u>Oraimo 20,000mAh</u><br><b>&#8358;21,000 </b><s style="opacity: 50%;">&#8358;23,000</s></p>
+          <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+          <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+      </div>
+  </div>
+</div>
+
+<div class="w3-col l3 s6">
+  <div class="w3-container product-slideshow">
+      <!-- First image for the product -->
+      <a href="" ><img class="slideshow-image" src="" style="width:100%"></a>
+      <!-- Second image for the product -->
+      <a href=""><img class="slideshow-image" src="" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+      <div class="gadget" data-name="Oraimo 20,000mAh" data-spec="Quality." data-price="21000">
+          <p><u>Oraimo 20,000mAh</u><br><b>&#8358;21,000 </b><s style="opacity: 50%;">&#8358;23,000</s></p>
+          <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+          <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+      </div>
+  </div>
+  <div class="w3-container product-slideshow">
+      <!-- First image for the product -->
+      <a href="" ><img class="slideshow-image" src="" style="width:100%"></a>
+      <!-- Second image for the product -->
+      <a href=""><img class="slideshow-image" src="" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+      <div class="gadget" data-name="Oraimo 20,000mAh" data-spec="Quality." data-price="21000">
+          <p><u>Oraimo 20,000mAh</u><br><b>&#8358;21,000 </b><s style="opacity: 50%;">&#8358;23,000</s></p>
+          <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+          <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+      </div>
+  </div>
+</div>
+
+  
+
+
+  
+    <div class="carousel" id="carousel2">
+      <div class="carousel-inner">
+          <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+7" alt="Image 7"></div>
+          <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+8" alt="Image 8"></div>
+          <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+9" alt="Image 9"></div>
+          <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+10" alt="Image 10"></div>
+          <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+11" alt="Image 11"></div>
+          <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+12" alt="Image 12"></div>
+      </div>
+      <button class="carousel-control prev" onclick="prevSlide('carousel2')">&#10094;</button>
+      <button class="carousel-control next" onclick="nextSlide('carousel2')">&#10095;</button>
+    </div>
+
+ <!------------------------------------------------------------------------------------------->
+    <div class="w3-container w3-text-grey" id="jeans">
+      <p style="text-align: center;">Phone | Chargers | Earpices | Cords</p>
+    </div>
+  
+    <!-- Product grid -->
+    <div class="w3-row">
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <a href="https://scontent.fabb1-3.fna.fbcdn.net/v/t39.30808-6/461919857_122101084736552825_4257210430803604763_n.jpg?stp=dst-jpg_s600x600&_nc_cat=102&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEfQVo3UhFyEQK3k6aqqKfOI07buIJrWqojTtu4gmtaqq5io4tg8FKVLCS2sKHEUlpNHtAeliwtiU-hCIB220Dn&_nc_ohc=35k5ckz5ueUQ7kNvgHSp_h4&_nc_zt=23&_nc_ht=scontent.fabb1-3.fna&_nc_gid=ADLtkm7DmmSppGusPBQYN2H&oh=00_AYDUe1vlARMdZM8S8pxlRROwC-Vk1yB5lX4QR5GloeswEA&oe=67049D97"><img src="https://scontent.fabb1-2.fna.fbcdn.net/v/t39.30808-6/461854448_122101066370552825_5814455777963895473_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFIvS8uiaLhH8dOR8lFCMAuvPanMk7rZH689qcyTutkfuL3ImdnFRgTpU1xFkDOwQ83nSSTSML_FOG8avmlyzen&_nc_ohc=2Bha0VQC8FYQ7kNvgEs_YIs&_nc_zt=23&_nc_ht=scontent.fabb1-2.fna&_nc_gid=Amy7bDSjkes7vl7QLjicO0G&oh=00_AYAx4TIsuQiwYlXRYHTgtnFFbQsqF6VVN2ReplAT8lUQag&oe=67049EE3" style="width:100%"></a>
+          <p>Micro USB plug<br><b>&#8358;1,500 </b><s></s></p>
+        </div>
+        <div class="w3-container">
+          <a href="https://scontent.fabb1-1.fna.fbcdn.net/v/t39.30808-6/461393176_122096633924552825_1164440560045886894_n.jpg?_nc_cat=107&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFCwWViDjQRm5WLwCwc-LfmFzM_Vca727MXMz9Vxrvbs_yUFtEl2hZHTR7iXinPi_iSWtbdl02m5OPjB6wDnXox&_nc_ohc=6gmSHkxONAEQ7kNvgFw6bPT&_nc_zt=23&_nc_ht=scontent.fabb1-1.fna&_nc_gid=AonPXd0IMsxMnSwgKvRv9N3&oh=00_AYB3rCFY5qvJC13-86GT3PmhaX76OM4FbE7mKH-3_bfpnA&oe=6704CF68"><img src="https://scontent.fabb1-3.fna.fbcdn.net/v/t39.30808-6/461948934_122101069616552825_9015491382353746794_n.jpg?stp=dst-jpg_p526x296&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGjR3tIbUCdR2KSR5gY78liLtl49RZ-K5ou2Xj1Fn4rmj0KQ1Q_Um0ruWiMecPMy4x1Qa65LV7ldaDQ6nsjVKoY&_nc_ohc=CmTm67NCLUEQ7kNvgELiac1&_nc_zt=23&_nc_ht=scontent.fabb1-3.fna&_nc_gid=AcNuo_GiK0aQxeWEDtSON3Y&oh=00_AYBlqSRjUDRPhvobcJN-pCJF7gz-l1LOvwpJLrU5Smf2mg&oe=6704C7FE" style="width:100%"></a>
+          <p>3 USB plugs<br><b>&#8358;4,000 </b><s>&#8358;4,500</s></p>
+        </div>
+      </div>
+  
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <a href="https://scontent.fabb1-3.fna.fbcdn.net/v/t39.30808-6/461530635_122096633936552825_8140663881094855125_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHsJMQm---8Yo2zBwTELhsbmmiX1v0A8WqaaJfW_QDxavuLd1jrRE_euMM1SI00388LNLrLjz6wmWz9C08MtwR7&_nc_ohc=g9AhbgoPtQoQ7kNvgEiB7Fc&_nc_zt=23&_nc_ht=scontent.fabb1-3.fna&_nc_gid=AofJC-UsAhCIUto5ch2fBvx&oh=00_AYDhRzgLlKOCqJkk4CBhKh4WmoSNOlNdJNxlN7rdsGZ1cg&oe=6704AEF5"><img src="https://scontent.fabb1-3.fna.fbcdn.net/v/t39.30808-6/461930138_122101568864552825_7956732484668080290_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE-bByLbVT4I0VA2zrrgArSX9zgfQZh0nFf3OB9BmHScRMdnnOSidnBj3kJr7-WSA1Mv3xqL33jMyOMCzvSGjuK&_nc_ohc=YbAku4eBR6MQ7kNvgHXtP8b&_nc_zt=23&_nc_ht=scontent.fabb1-3.fna&_nc_gid=AWGk2O3bzcjO3hKSmzZYlnq&oh=00_AYBert9iy81fgz9rBgthxpt9_NFZkDwXt2-xub3-9yBs0A&oe=6704D162" style="width:100%"></a>
+            <span class="w3-tag w3-display-topleft">New</span>
+            <div class="w3-display-middle w3-display-hover">
+              <a href="link"><button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button></a>
+            </div>
+          </div>
+          <p>2 iPhone plugs<br><b>&#8358;2,850</b></p>
+        </div>
+        <div class="w3-container">
+          <a href="https://scontent.fabb1-1.fna.fbcdn.net/v/t39.30808-6/462081089_122101644110552825_1325096737495167272_n.jpg?stp=dst-jpg_s600x600&_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeH3KVRoRB55mNFKqlQaDolp-moFZqCM9WP6agVmoIz1YzljydXZSVwzn6vTJ3IELVEBQsUtPcf3L00-sk16MQim&_nc_ohc=cyFLunlvN0YQ7kNvgGA6bX8&_nc_zt=23&_nc_ht=scontent.fabb1-1.fna&_nc_gid=AASLMTPe6MMYsudzxi34POZ&oh=00_AYCNbhp13DkYUEVjYf4zPHytmilqxQUYyPYSeYtXib6AFA&oe=6704C7BB"><img src="https://scontent.fabb1-1.fna.fbcdn.net/v/t39.30808-6/462119241_122101623860552825_976149564812121255_n.jpg?stp=dst-jpg_s600x600&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHn4OPEi-WtPvKAJ_EiPD5ygacM4Gsq74CBpwzgayrvgErRkaafvkwFlgxrPlgfTxOCT0CbFZxJAeW9Zb9uIbhb&_nc_ohc=oPn1eLwtiKwQ7kNvgGhm7v0&_nc_zt=23&_nc_ht=scontent.fabb1-1.fna&_nc_gid=ANs0kucFytaWThyGVVL5jKm&oh=00_AYCffJRIqRLQ4gJxsQCfpL_tlF-D46M_f_H8Wh5AX3UrkQ&oe=6704C579" style="width:100%"></a>
+          <p>Oraimo Earphone<br><b>&#8358;1,500</b></p>
+        </div>
+      </div>
+  
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <a href="https://scontent.fabb1-2.fna.fbcdn.net/v/t39.30808-6/461319028_122096633942552825_4133221362269357183_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGNXQMmYMBWifyxgfXCxMbzMKDQ8s36IU4woNDyzfohTqmV3_b-sxzS7H5OL-k4X3TBUk11J0tvLK7N8TfS8rmE&_nc_ohc=iyfY6mUHG-gQ7kNvgHnqqLP&_nc_zt=23&_nc_ht=scontent.fabb1-2.fna&_nc_gid=Amr70U8jAlH1Jp9FYc8Xsy4&oh=00_AYANXz8XLTp5spBS8KSjSIKX5Bss1h-Kz84lQNQmcvPkkA&oe=6704B538"><img src="https://scontent.fabb1-2.fna.fbcdn.net/v/t39.30808-6/461936710_122101582250552825_188683908125473098_n.jpg?stp=dst-jpg_s600x600&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFCmJVPf7iI6AHnrAMOwtFrk8XdIWRVQ1eTxd0hZFVDVyVG8qTPjVUVQkbFznLjsPdRNUlleTOiwQ5wV2tKJQiv&_nc_ohc=aZ09tQvQEOYQ7kNvgHM2wyV&_nc_zt=23&_nc_ht=scontent.fabb1-2.fna&_nc_gid=AVnQKSEKAdP-aBUBKJxNuVe&oh=00_AYCyrIaDG3h5G1w4JoWlQ1cDiqP11EXrxMzhQQkWpGtKbQ&oe=6704ACE7" style="width:100%"></a>
+          <p>Michpro 20,000mAh<br><b>&#8358;18,000 </b><s> &#8358;19,500</s></p>
+        </div>
+        <div class="w3-container">
+          <div class="w3-display-container">
+            <a href="https://scontent.fabb1-3.fna.fbcdn.net/v/t39.30808-6/461425843_122096634122552825_8314708887988458217_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHi8ykH9_bdaEp7ETK6oZfXA0-d_ZWSb-MDT539lZJv485ZSL_Z5-hwi0VvT2TPLcOAzg6nVaoyUJ-H0Kr8krFa&_nc_ohc=bIEt8-Dv1RoQ7kNvgGSGyao&_nc_zt=23&_nc_ht=scontent.fabb1-3.fna&_nc_gid=ALvUQQGc7-_hMgsUjasWswW&oh=00_AYCW878cZEDEnRtMGxb91vdDAYy3pFFsxzKUwuLSIkuJDA&oe=6704D9F4"><img src="https://scontent.fabb1-2.fna.fbcdn.net/v/t39.30808-6/461982974_122101582298552825_2814432124136713397_n.jpg?stp=dst-jpg_s600x600&_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFDSL8zjQKFZewoHkPXM8Ur_iVNmtr09xL-JU2a2vT3EhwdaYXk98ny7xGJhmHG8OHCSli5xqeIJA--IAhFObOe&_nc_ohc=rmPivriK3-IQ7kNvgHs53Or&_nc_zt=23&_nc_ht=scontent.fabb1-2.fna&_nc_gid=AVnQKSEKAdP-aBUBKJxNuVe&oh=00_AYDiZX2Icvn4-HU8t4vKuKhMhAG7h4rDwQPQnlfCP6dA5A&oe=6704B470" style="width:100%"></a>
+            <span class="w3-tag w3-display-topleft">Bulk</span>
+            <div class="w3-display-middle w3-display-hover">
+              <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+            </div>
+          </div>
+          <p>2 Michpro 20,000mAh<br><b class="w3-text-re">&#8358;35,000 </b><s>&#8358;39,000</s></p>
+        </div>
+      </div>
+  
+      <div class="w3-col l3 s6">
+        <div class="w3-container">
+          <a href="https://scontent.fabb1-3.fna.fbcdn.net/v/t39.30808-6/461995679_122101594730552825_6684555286457292962_n.jpg?stp=dst-jpg_s600x600&_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHyZayPTOOjMSk6E_zdgXMlyEJGiZsXegPIQkaJmxd6A_cR_z2JytBO5lCbxPt0sAdC-jgtFCp7ooyDNZHZvxgx&_nc_ohc=ihsa51-pCoEQ7kNvgFwMBl1&_nc_zt=23&_nc_ht=scontent.fabb1-3.fna&_nc_gid=A2ESPp-QCD3Xd7oOppUVGan&oh=00_AYBvOalQZQHYE9hHxytHx7ROg1evP5oGDhxSnc_QG9gnSQ&oe=6704CEA1"><img src="https://scontent.fabb1-2.fna.fbcdn.net/v/t39.30808-6/461962403_122101597502552825_5512082967710770640_n.jpg?stp=dst-jpg_p526x296&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeF1FvQzS2Efdqr506B8Tdqc90BRfBlaYfL3QFF8GVph8t4O7Fgu8kgb-fT3Gr1XtA6KZ3xA9c4zKVCh1tGdnPfG&_nc_ohc=Oaq7RT35PyIQ7kNvgEj2CDU&_nc_zt=23&_nc_ht=scontent.fabb1-2.fna&_nc_gid=A-hadk3kMP72p4hVdwHesG9&oh=00_AYAVEBpfcWMma1JaAxsqDSuQp1JcV2L6g4RmP7r6wa1Ijw&oe=6704B2DB" style="width:100%"></a>
+          <p>2 Oraimo 20,000mAh<br><b>&#8358;41,000 </b><s>&#8358;48,000</s></p>
+        </div>
+        <div class="w3-container">
+          <a href="https://scontent.fabb1-1.fna.fbcdn.net/v/t39.30808-6/462004656_122101642898552825_4444054300713152063_n.jpg?stp=dst-jpg_s600x600&_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFPUXPoxRgJBjECkpWIlK8qr3uYJRn9gu2ve5glGf2C7Xy6jIXEObhbHrcoF3pHihJCZQ8CnwAq6jZBOlgcMOjp&_nc_ohc=hJXYZLxvwyQQ7kNvgGGGWU4&_nc_zt=23&_nc_ht=scontent.fabb1-1.fna&_nc_gid=A5xu4bjGqjOOZ9gkX-XCaKj&oh=00_AYBakCHXLZKvRvdYH-jzLc_WuJJsJ9w0G3kgP8VEB1K_DQ&oe=6704C030"><img src="https://scontent.fabb1-2.fna.fbcdn.net/v/t39.30808-6/462094309_122101642838552825_8025323813328412152_n.jpg?stp=dst-jpg_s600x600&_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFBPZ-vD6RwkCbcumRJUBtx6F1kFPijUEXoXWQU-KNQRbmU-UazCAE2CipB5v-UeMcxnt7aiAzRtVd20ps8Rb2Q&_nc_ohc=hUNjVhxityYQ7kNvgFD1RpU&_nc_zt=23&_nc_ht=scontent.fabb1-2.fna&_nc_gid=A5xu4bjGqjOOZ9gkX-XCaKj&oh=00_AYDa6dCpODBnoaUC3cDucMrxN1Ju4tTfyAt1I7DWdUnzEg&oe=6704C524" style="width:100%"></a>
+          <p>3 Oraimo Earphones<br><b>&#8358;4,300 </b><s>&#8358;4,500</s></p>
+        </div>
+      </div>
+  
+      <div class="carousel" id="carousel3">
+        <div class="carousel-inner">
+            <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+13" alt="Image 13"></div>
+            <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+14" alt="Image 14"></div>
+            <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+15" alt="Image 15"></div>
+            <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+16" alt="Image 16"></div>
+            <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+17" alt="Image 17"></div>
+            <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+18" alt="Image 18"></div>
+        </div>
+        <button class="carousel-control prev" onclick="prevSlide('carousel3')">&#10094;</button>
+        <button class="carousel-control next" onclick="nextSlide('carousel3')">&#10095;</button>
+    </div>
+<!------------------------------------------------------------------------------->
+
+
+<!----------------------------------------------------------------------------------------------------->
+      <div class="w3-container w3-text-grey" id="jeans">
+        <p style="text-align: center;">Laptops | Chargers | Earpices | Cords</p>
+      </div>
+    
+      <!-- Product grid -->
+
+      <div class="w3-row">
+        <div class="w3-col l3 s6">
+          <div class="w3-container">
+            <a href=""><img src="" style="width:100%"></a>
+            <p>Oraimo 20,000mAh<br><b>&#8358;21,000 </b><s>&#8358;23,000</s></p>
+          </div>
+          <div class="w3-container">
+            <a href=""><img src="" style="width:100%"></a>
+            <p>Oraimo 10,000mAh<br><b>&#8358;12,000 </b><s>&#8358;14,000</s></p>
+          </div>
+        </div>
+    
+        <div class="w3-col l3 s6">
+          <div class="w3-container">
+            <div class="w3-display-container">
+              <a href=""><img src="" style="width:100%"></a>
+              <span class="w3-tag w3-display-topleft">New</span>
+              <div class="w3-display-middle w3-display-hover">
+                <a href="link"><button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button></a>
+              </div>
+            </div>
+            <p>ACE ELEC 20,000mAhC<br><b>&#8358;16,000</b></p>
+          </div>
+          <div class="w3-container">
+            <a href=""><img src="" style="width:100%"></a>
+            <p>Lightning Plug - iPhone<br><b>&#8358;1,500</b></p>
+          </div>
+        </div>
+    
+        <div class="w3-col l3 s6">
+          <div class="w3-container">
+            <a href=""><img src="" style="width:100%"></a>
+            <p>2 Ace Elec 20K mAh<br><b>&#8358;31,000 </b><s> &#8358;32,000</s></p>
+          </div>
+          <div class="w3-container">
+            <div class="w3-display-container">
+              <a href=""><img src="" style="width:100%"></a>
+              <span class="w3-tag w3-display-topleft">Bulk</span>
+              <div class="w3-display-middle w3-display-hover">
+                <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+              </div>
+            </div>
+            <p>3 Type-C cords<br><b class="w3-text-re">&#8358;5,800 </b><s>&#8358;7,500</s></p>
+          </div>
+        </div>
+    
+        <div class="w3-col l3 s6">
+          <div class="w3-container">
+            <a href=""><img src="" style="width:100%"></a>
+            <p>Charger and USB cord<br><b>&#8358;3,800 </b><s>&#8358;4,500</s></p>
+          </div>
+          <div class="w3-container">
+            <a href=""><img src="" style="width:100%"></a>
+            <p>Type-C plug Oraimo<br><b>&#8358;2,000 </b><s>&#8358;2,500</s></p>
+          </div>
+        </div>
+    
+        <div class="carousel" id="carousel4">
+          <div class="carousel-inner">
+              <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+19" alt="Image 19"></div>
+              <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+20" alt="Image 20"></div>
+              <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+21" alt="Image 21"></div>
+              <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+22" alt="Image 22"></div>
+              <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+23" alt="Image 23"></div>
+              <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+24" alt="Image 24"></div>
+          </div>
+          <button class="carousel-control prev" onclick="prevSlide('carousel4')">&#10094;</button>
+          <button class="carousel-control next" onclick="nextSlide('carousel4')">&#10095;</button>
+      </div>
+<!---------------------------------------------------------------------------------------------------->
+        <div class="w3-container w3-text-grey" id="jeans">
+          <p style="text-align: center;">Powerbanks | Chargers | Earpices | Cords</p>
+        </div>
+      
+        <!-- Product grid -->
+        <div class="w3-row">
+          <div class="w3-col l3 s6">
+            <div class="w3-container">
+              <a href="https://wa.me/+2347038490327?text=Hello+World"><img src="https://cdn-img.oraimo.com/fit-in/600x600/NG/album/opb-p204d/opb-p204d-black.png" style="width:100%"></a>
+              <p>Oraimo 20,000mAh<br><b>&#8358;21,000 </b><s>&#8358;23,000</s></p>
+            </div>
+            <div class="w3-container">
+              <a href="https://scontent.fabb1-2.fna.fbcdn.net/v/t39.30808-6/461892946_122100431018552825_2481624147785528274_n.jpg?_nc_cat=109&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeG9oLxIuoOZeS7ySd3v9ONShEqxDY5SkmaESrENjlKSZlg1up8M7rsfyvpd8PMX65ZqnvYNctAG_Rj_m8kAyvje&_nc_ohc=keAhc1m9ycoQ7kNvgGrVbaY&_nc_zt=23&_nc_ht=scontent.fabb1-2.fna&_nc_gid=AnhLh44GkWyCFnj3zRhfLHE&oh=00_AYCFY-Fu2sXFkedXrz3wvYLnwDvEUVsrYT20HLZn6_9z3w&oe=6703A0DB"><img src="https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/72/8673113/1.jpg?2873" style="width:100%"></a>
+              <p>Oraimo 10,000mAh<br><b>&#8358;12,000 </b><s>&#8358;14,000</s></p>
+            </div>
+          </div>
+      
+          <div class="w3-col l3 s6">
+            <div class="w3-container">
+              <div class="w3-display-container">
+                <a href="https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/02/3088932/3.jpg?3620"><img src="https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/02/3088932/5.jpg?3620" style="width:100%"></a>
+                <span class="w3-tag w3-display-topleft">New</span>
+                <div class="w3-display-middle w3-display-hover">
+                  <a href="link"><button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button></a>
+                </div>
+              </div>
+              <p>ACE ELEC 20,000mAhC<br><b>&#8358;16,000</b></p>
+            </div>
+            <div class="w3-container">
+              <a href="https://scontent.fabb1-2.fna.fbcdn.net/v/t39.30808-6/461421096_122096633762552825_1734467953986639388_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHWbAKPLMCKVjcMkJBd7s4EBuiSMngPNRgG6JIyeA81GAtKKU_umUShR1XjZHqabdsS9oClARD8hpbzZowqvIpM&_nc_ohc=PXdkk2hyVwcQ7kNvgGSW_xv&_nc_zt=23&_nc_ht=scontent.fabb1-2.fna&_nc_gid=AY81asrQz6bvz3r-KC3z-f_&oh=00_AYB4NqGq4I_NQOFdIsTE1WZ4k6x6zyzzu9HifIfjDXUaEA&oe=67038A0C"><img src="https://overtimebrands.com/cdn/shop/products/1_4da67315-bc33-47b1-9087-19d3f8fa4539_1200x.jpg?v=1633466130" style="width:100%"></a>
+              <p>Lightning Plug - iPhone<br><b>&#8358;1,500</b></p>
+            </div>
+          </div>
+      
+          <div class="w3-col l3 s6">
+            <div class="w3-container">
+              <a href="https://scontent.flos1-2.fna.fbcdn.net/v/t39.30808-6/461713684_122100773252552825_2519469957732823887_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeE6Ki0MtLwAR7JVL0el811AgWGOWaeBslWBYY5Zp4GyVSUHtp97Mg8guXAEgXIQp1_rkqLHd4GBY_B0tUfZ1T-k&_nc_ohc=auS4O_WrHoAQ7kNvgENZkFX&_nc_zt=23&_nc_ht=scontent.flos1-2.fna&_nc_gid=AkY8f3Hxafr_L_ivCO3JFrm&oh=00_AYAZrZjinRnd_Eiig0gQ_GFgOTXY2DSP461bgKTD6jnIag&oe=6703938C"><img src="https://scontent.flos1-2.fna.fbcdn.net/v/t39.30808-6/461876285_122100430988552825_7001936291421528364_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeHi9Hqo7YOSrs2Di5ZKurQmATpbuPvR0JQBOlu4-9HQlKN2aIbtWGh5f_rdvAydhkuDZN_Fley7l5N5IvJyzlrX&_nc_ohc=OKkIXynW3tUQ7kNvgHIMkcC&_nc_zt=23&_nc_ht=scontent.flos1-2.fna&oh=00_AYCAIZAF6fLpmjnmcqStxd1fBQ9IYt1OseDezZ1xFlKFuQ&oe=67031588" style="width:100%"></a>
+              <p>2 Ace Elec 20K mAh<br><b>&#8358;31,000 </b><s> &#8358;32,000</s></p>
+            </div>
+            <div class="w3-container">
+              <div class="w3-display-container">
+                <a href="https://scontent.flos1-1.fna.fbcdn.net/v/t39.30808-6/461472308_122096633906552825_5686205977358620149_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeGFxA7FklWpinJ34az8nS5vtaMnIZ_9Kr-1oychn_0qvzbqaGOz8FCQgvdj2uui_wTGk5k-8jhKgL-ajsl45Jg6&_nc_ohc=sBABTA9jUuEQ7kNvgFQ5ZJc&_nc_zt=23&_nc_ht=scontent.flos1-1.fna&_nc_gid=ARAGZdqZVBKPaXcT_pqFQ2Z&oh=00_AYAUk7tmz1WFSwXU5Cy8FYjWpf-WPqaww1-aU_nhDiK57w&oe=6703AE33"><img src="https://scontent.flos1-2.fna.fbcdn.net/v/t39.30808-6/462000644_122100431024552825_8377724429558986341_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeEnAOaxz60IGn5RcNBZi5ziyqHybWtYTUnKofJta1hNSfibwTkBWhMfR8LRRjKInETFPfvUIyJlyUQ0teA8Fk30&_nc_ohc=0ttPlcOm7C0Q7kNvgHmTV6o&_nc_zt=23&_nc_ht=scontent.flos1-2.fna&_nc_gid=AIpcit9wV7hCYMSSo4qwDwM&oh=00_AYCCUjqWuoLEPlYlqLAhE9UJWaQJKlt-tM9Ashmpu7HpuA&oe=6703219F" style="width:100%"></a>
+                <span class="w3-tag w3-display-topleft">Bulk</span>
+                <div class="w3-display-middle w3-display-hover">
+                  <button class="w3-button w3-black">Buy now <i class="fa fa-shopping-cart"></i></button>
+                </div>
+              </div>
+              <p>3 Type-C cords<br><b class="w3-text-re">&#8358;5,800 </b><s>&#8358;7,500</s></p>
+            </div>
+          </div>
+      
+          <div class="w3-col l3 s6">
+            <div class="w3-container">
+              <a href="https://scontent.flos1-2.fna.fbcdn.net/v/t39.30808-6/461524275_122096633918552825_1583713558708715137_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeG0zR1Tb8c5VizKQh6mZGPClRRxgoQ8M22VFHGChDwzbQcvI7M3RMCrD3ZbMPHyalKsqbo_QhRGpHM6XGfJKbix&_nc_ohc=2L5ysujAbLcQ7kNvgGCe9ov&_nc_zt=23&_nc_ht=scontent.flos1-2.fna&_nc_gid=AHkfH6_8nxOb0CM4bxit98k&oh=00_AYAI-r3wnf1m17c0cO1RGOXhUWiY8LU8XNm8WDqgIw61wQ&oe=6703086D"><img src="https://cdn-img.oraimo.com/fit-in/600x600/KE/product/2023/12/26/OCW-U66S-M53-Black.png" style="width:100%"></a>
+              <p>Charger and USB cord<br><b>&#8358;3,800 </b><s>&#8358;4,500</s></p>
+            </div>
+            <div class="w3-container">
+              <a href="https://scontent.fabb1-2.fna.fbcdn.net/v/t39.30808-6/461429004_122096633912552825_3973696003509558305_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=127cfc&_nc_eui2=AeFqnh_QHTZxqLx53H4douhtTNNDF8RqoHlM00MXxGqgefXmQI-csDTQEXSs16g1hMJGDzFL-xcnA0tAGe_jRZsl&_nc_ohc=5e6ERF32atwQ7kNvgH2Vk-Y&_nc_zt=23&_nc_ht=scontent.fabb1-2.fna&_nc_gid=Ac3iOBAYAQX7RLKwmGkgv25&oh=00_AYAvp3puJTvnSfCpNEGXgQespG4SXv4-DXRS3N2-L_rOhg&oe=67024D13"><img src="https://allinonestore.ng/public/uploads/all/bxsiewvkQ4uwrlH7MVQqypUNrnAm5Gr1hWU5zyf7.webp" style="width:100%"></a>
+              <p>Type-C plug Oraimo<br><b>&#8358;2,000 </b><s>&#8358;2,500</s></p>
+            </div>
+          </div>
+      
+        
+  </div>
+
+  <!--Calculator-->
+  <div id="calculator">
+    
+    <span class="cancel-icon" id="cancel-icon"><b class="fa fa-remove play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"></b></span><b class="iaas">iGadgetsPro<b class="ono">more</b></b>
+    <p><b>Order Summary</b></p>
+    <div id="order-summary">No gadgets selected.</div>
+    <div id="total-price">Total: ₦0</div>
+    <a id="whatsapp-link" href="#" target="_blank" class="play-audio" data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Check out</a>
+</div>
+
+  <!-- Subscribe section -->
+  <div class="w3-container w3-black w3-padding-32">
+    <h1>Subscribe</h1>
+    <p>To get special offers and VIP treatment:</p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+    <button type="button" class="w3-button w3-red w3-margin-bottom" onclick="myFunction5()" style="background-color:#0055cc !important;">Subscribe</button>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer" >
+    <div class="w3-row-padding">
+      <div class="w3-col s4">
+        <h4>Contact</h4>
+        <p>Questions? Go ahead.</p>
+        <form action="/action_page.php" target="_blank">
+          <p><input class="w3-input w3-border" type="text" placeholder="Name" name="Name" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Email" name="Email" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Subject" name="Subject" required></p>
+          <p><input class="w3-input w3-border" type="text" placeholder="Message" name="Message" required></p>
+          <button type="submit" class="w3-button w3-block w3-black">Send</button>
+        </form>
+      </div>
+
+      <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="#">About us</a></p>
+        <p><a href="#">We're hiring</a></p>
+        <p><a href="#">Support</a></p>
+        <p><a href="#">Find store</a></p>
+        <p><a href="#">Shipment</a></p>
+        <p><a href="#">Payment</a></p>
+        <p><a href="#">Gift card</a></p>
+        <p><a href="#">Return</a></p>
+        <p><a href="#">Help</a></p>
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Store</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> iTechx</p>
+        <p><i class="fa fa-fw fa-phone"></i> +2347038490327</p>
+        <p><i class="fa fa-fw fa-envelope"></i> israelchidozie3<br>@gmail.com</p>
+        <h4>We accept</h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+        <br>
+        <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24">@copywrite <a href="https://www.w3schools.com/spaces" title="W3.CSS" target="_blank" class="w3-hover-opacity">All rights reserved</a></div>
+
+  <!-- End page content -->
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">NEWSLETTER</h2>
+      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+<script src="../assets/js/script.js"></script>
+<!----------------------------------------------------------------->
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<!----------------------------------------------------------------->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    function productSlideshow() {
+        // Get all the product slideshow containers
+        const slideshows = document.querySelectorAll('.product-slideshow');
+        
+        slideshows.forEach(function (slideshow) {
+            // Get the two images inside each slideshow
+            const images = slideshow.querySelectorAll('.slideshow-image');
+            
+            let currentImageIndex = 0;
+            
+            // Set an interval to alternate the images every 5 seconds
+            setInterval(function () {
+                // Hide both images
+                images[0].style.display = 'none';
+                images[1].style.display = 'none';
+                
+                // Show the next image in the sequence
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                images[currentImageIndex].style.display = 'block';
+            }, 5000);
+        });
+    }
+
+    // Call the product slideshow function
+    productSlideshow();
+});
+
+// Start the slideshow when the page loads
+window.onload = productSlideshow;
+///////////////////////////////////////////////////
+
+</script>
+</body>
+</head>
+</html>

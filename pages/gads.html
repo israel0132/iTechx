@@ -1,0 +1,1526 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T4J53146GL"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-T4J53146GL');
+</script>
+
+    <title>template</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="author" content="Israel Chidozie">
+    <meta name="company" content="isubz.com.ng">
+    <meta http-equiv="refresh" content="">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../assets/css/styles.css">
+    <style>
+        /********************************************************/
+/* Default light mode */
+#header-logo {
+    content: url("../assets/images/logo-light.png");
+    }
+    
+    /* Dark mode */
+    body.dark-mode #header-logo {
+    content: url("../assets/images/logo-dark.png");
+    }
+    /*******************************************************/
+    /* Default light mode */
+    #sider-logo {
+    content: url("../assets/images/logo-light.png");
+    }
+    
+    /* Dark mode */
+    body.dark-mode #sider-logo {
+    content: url("../assets/images/logo-dark.png");
+    }
+    </style>
+  </head>
+  <body>
+    
+  <iframe id="audioFrame" width="300" height="60" src="" frameborder="0" allow="autoplay" style="display: none;"></iframe>
+<!----------------------------------------------------->
+<div class="icon-container">
+  <!-- Dollar Icon -->
+  
+  
+  <!-- WhatsApp Icon -->
+  <a href="https://wa.me/+2347038490327" class="whatsapp-icon circle-button play-audio" data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1" title="Money" data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1" title="Chat on WhatsApp">
+      <i class="fab fa-whatsapp" onclick="changeColorAndPosition(this.parentElement)" style="visibility: visible !important;" ></i>
+  </a>
+</div>
+
+<!------------------------------------------->
+<div class="circle-btn ad-link play-audio" data-audio-src="https://vocaroo.com/embed/1h9pm8oM6sMD?autoplay=1"  onclick="changeColorAndMove(this)">
+  <i class="fas fa-dollar-sign"></i>
+</div>
+<!------------------------------------------------->
+<!-- Background overlay -->
+<div id="overlay" onclick="hideForm()"></div>
+
+<!-- Registration form -->
+<form id="form" style="z-index: 1004;">
+    <span class="close-btn play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1" onclick="hideForm()"><b>×</b></span>
+    <h3 style="font-family: sans-serif; text-align: center;" class="forms">iSubz Giveaway</h3>
+    <div class="field">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Enter your full name">
+    </div>
+    <div class="field">
+        <label for="email">Email</label>
+        <input type="email" name="email" id="email" placeholder="Enter your email">
+    </div>
+    <div class="field">
+        <label for="phone">Phone</label>
+        <input type="tel" name="phone" id="phone" placeholder="Enter your phone number">
+    </div>
+    <div class="field">
+        <label for="isubz">iSubz Wallet ID</label>
+        <input type="text" name="isubz" id="isubz" placeholder="My iSubz wallet ID">
+    </div>
+    <div class="field">
+        <label for="account">iSubz Funding Account</label>
+        <input type="text" name="account" id="account" placeholder="iSubz bank account NO">
+    </div>
+    <div class="field">
+        <input type="text" name="visi" id="visitor-count-hidden">
+    </div>
+        
+    <input type="submit" id="button" value="Submit" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">
+    <p class="info">Visit <a href="https://isubz.com.ng/?login"><b>iSubz.com.ng</b></a> to get your iSubz details</p>
+</form>
+
+<!-- Stored Data Section -->
+<div id="stored-data" style="z-index: 1004;">
+    <span class="close-stored-icon play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1" onclick="hideStoredData()">×</span>
+    <h2 style="font-family: sans-serif !important;" class="stored-data-header"><b>iTechx</b></h2>
+    
+    <h4 style="text-align: center; padding-top: 40; font-family: sans-serif">MY PROFILE</h4><hr>
+    <div class="data-field" id="stored-name"></div><hr>
+    <div class="data-field" id="stored-email"></div><hr>
+    <div class="data-field" id="stored-phone"></div><hr>
+    <div class="data-field" id="stored-isubz"></div><hr>
+    <div class="data-field" id="stored-account"></div><hr>
+    <div style="display: none" class="data-field" id="stored-visit-count"></div>
+    <div id="visitor-count" class="visitor-count">Error!</div><hr>
+    
+    <div style="display: none;" class="data-field" id="stored-points"></div>
+    <p style="font-size: 14px; color: #353535; text-align: center;"><span><b style="color: blue; font-size: 16px" class="heads">Cash In Your Points</b></span><br><br>Resubmit the iSubz giveaway form anytime you want to update your profile or receive a &#8358;CA$# prize for your bonus points in your <a href="https://isubz.com.ng"><b>iSubz.com.ng</b></a> wallet <br><br><span>You earn bonus points whenever you visit, you're online and even more points when you click on ads. Good luck!</span></p>
+   <!-- <h6 style="text-align: center;">Earn Points</h6> -->
+    <p style="font-size: 14px; color: #353535; text-align: center;"></p>
+    <p style="font-size: 14px; color: #353535; text-align: center;" class="hold">
+        <b style="text-decoration: underline;">Note:</b> Your points will reset to 0 whenever you submit the form. Points below 5,000 will not be rewarded. <br>You may lose some points if you leave the site before staying for at least 15 seconds. <br><br>Thanks for joining.</p>
+    <p style="font-size: 14px; color: #353535; text-align: center;" class="two heads"><a style="text-decoration: none;" href="https://isubz.com.ng"><b>Setup isubz wallet</b></a></p>
+  
+    
+    <button id="reset-btn">Reset Points to 0.0</button>
+
+    
+</div>
+<!------------------------------------------------->
+
+
+
+<!-- Sidebar/menu -->
+
+<!-- Sidebar -->
+<nav class="sidebar" id="mySidebar">
+  <div class="sidebar-header">
+    <div class="logo-circle" style="background-color: #00000000 !important;">
+      <img src="..\assets\images\logo.png" id="sider-logo" style="width: 100%; background:rgba(0, 0, 0, 0) !important"> <!-- Replace with your logo -->
+    </div>
+    <h3 style="margin-right: 100px;">iTechx</h3>
+    <i class="fas fa-times close-btn play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1" onclick="toggleSidebar()"></i>
+  </div>
+
+  <div class="category" onclick="toggleSubMenu(this)" style="margin-top: 60px;">
+    <a href="javascript:void(0)" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">
+      <span class="icon-circle"><i class="fas fa-laptop" style="margin: 0;"></i></span>Laptops<i class="fas fa-angle-right"></i>
+    </a>
+    <div class="subcategory">
+      <a href="hp.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">HP</a>
+      <a href="dell.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Dell</a>
+      <a href="lenovo.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Lenovo</a>
+      <a href="apple.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Apple</a>
+      <a href="acer.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Acer</a>
+      <a href="microsoft.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Microsoft</a>
+      <a href="razer.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Razer</a>
+      <a href="msi.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">MSI</a>
+      <a href="samsung.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Samsung</a>
+      <a href="lg.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">LG</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="huawei.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Huawei</a>
+      <a href="vivo.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Vivo</a>
+    </div>
+  </div>
+
+  <div class="category" onclick="toggleSubMenu(this)">
+    <a href="javascript:void(0)" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">
+      <span class="icon-circle"><i class="fas fa-mobile-alt" style="margin: 0;"></i></span>Smartphones <i class="fas fa-angle-right"></i>
+    </a>
+    <div class="subcategory">
+      <a href="pages\iphone.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">iPhone</a>
+      <a href="samsung.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Samsung</a>
+      <a href="oppo.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Oppo</a>
+      <a href="techo.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Techo</a>
+      <a href="infinix.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Infinix</a>
+      <a href="redmi.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Redmi</a>
+      <a href="itel.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Itel</a>
+      <a href="nokia.hmtl" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Nokia</a>
+    </div>
+  </div>
+
+  <div class="category" onclick="toggleSubMenu(this)">
+    <a href="javascript:void(0)" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">
+      <span class="icon-circle"><i class="fas fa-tablet-alt" style="margin-left: 0;"></i></span>Tablets <i class="fas fa-angle-right"></i>
+    </a>
+    <div class="subcategory">
+      <a href="#">iPads</a>
+      <a href="#">Android Tablets</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+    </div>
+  </div>
+
+  <div class="category" onclick="toggleSubMenu(this)">
+    <a href="javascript:void(0)" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">
+      <span class="icon-circle"><i class="fas fa-headphones" style="margin: 0;"></i></span>Headphones <i class="fas fa-angle-right"></i>
+    </a>
+    <div class="subcategory">
+      <a href="#">Wireless</a>
+      <a href="#">Noise-Cancelling</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+    </div>
+  </div>
+
+  <div class="category" onclick="toggleSubMenu(this)">
+    <a href="javascript:void(0)" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">
+      <span class="icon-circle"><i class="fas fa-charging-station" style="margin: 0;"></i></span>Powerbanks <i class="fas fa-angle-right"></i>
+    </a>
+    <div class="subcategory">
+      <a href="#">Oraimo</a>
+      <a href="#">ACE ELEC</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+    </div>
+  </div>
+
+  <div class="category" onclick="toggleSubMenu(this)">
+    <a href="javascript:void(0)" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">
+      <span class="icon-circle"><i class="fas fa-plug" style="margin: 0;"></i></span>Cables <i class="fas fa-angle-right"></i>
+    </a>
+    <div class="subcategory">
+      <a href="#">USB-C</a>
+      <a href="#">Lightning</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+      <a href="aleinware.html" class="play-audio"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Aleinware</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Top menu on small screens -->
+<header>
+  <div class="header">
+      <!-- Home Icon -->
+      <a href="index.html" class="w3-bar-item w3-button">
+          <i class="fa fa-home play-audio" data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1"></i>
+      </a>
+
+      <!-- Logo Image and Title -->
+      <div style="display: flex; align-items: center;">
+          <img src="../assets/images/logo-light.png" id="header-logo" class="logo"
+               alt="iTechx logo" style="width: 40px; margin-right: 10px;">
+          <h2>iTechx</h2>
+      </div>
+
+      <!-- Icons (Gift, User, Dark Mode Toggle, and Menu) -->
+      <div class="icons">
+          <i class="fas fa-gift play-audio" data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1" onclick="showForm()"></i>
+          <i class="fas fa-user play-audio" style="margin-right: 10px;" data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1" onclick="showStoredData()"></i>
+          
+          <!-- Dark Mode Toggle Icon -->
+          <i class="fas fa-moon play-audio" id="darkModeToggle" onclick="toggleDarkMode()"  data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1"></i>
+
+          <!-- Menu Icon -->
+          <a  href="javascript:void(0)" class="w3-bar-item w3-button w3-padding-24 w3-right play-audio" data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1" onclick="toggleSidebar()">
+              <i class="fa fa-bars"></i>
+          </a>
+      </div>
+  </div>
+</header>
+
+
+<!-- Overlay effect when opening sidebar on small screens 
+<div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div> -->
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:250px">
+
+  <!-- Push down content on small screens -->
+  <div class="w3-hide-large" style="margin-top: 50px; margin-left: 0px !important;"></div>
+  
+  <!-- Top header -->
+  
+
+  <!-- Image header -->
+  <div class="slideshow-container">
+    <div class="mySlides w3-display-container w3-container">
+      <img src="assets\images\display1.png" alt="Go-Tech"> 
+      <div class="w3-display-topleft w3-text-white">
+        <h1 style="text-shadow: 1px 1px 1px rgba(71, 71, 71, 0.281); opacity: 50%;">GoTechy</h1>
+      </div>
+    </div>
+  
+    <div class="mySlides w3-display-container w3-container">
+      <img src="assets\images\display2.jpg" alt="Image 2">
+      <div class="w3-display-topleft w3-text-white">
+        <h1></h1>
+      </div>
+    </div>
+  
+    <div class="mySlides w3-display-container w3-container">
+      <img src="assets\images\display3.png" alt="Image 3">
+      <div class="w3-display-topleft w3-text-white">
+        <h1></h1>
+      </div>
+    </div>
+  
+    <div class="mySlides w3-display-container w3-container">
+      <img src="assets\images\display4.png" alt="Image 4">
+      <div class="w3-display-topleft w3-text-white">
+        <h1></h1>
+      </div>
+    </div>
+  
+    <div class="mySlides w3-display-container w3-container">
+      <img src="assets\images\logo.png" alt="Image 5">
+      <div class="w3-display-topleft w3-text-white">
+        <h1></h1>
+      </div>
+    </div>
+  </div>
+<!---->
+
+<div class="carousel" id="carousel1">
+  <div class="carousel-inner">
+      <div class="carousel-item"><img src="assets\images\palmpay1.png" alt="Image 1"></div>
+      <div class="carousel-item"><img src="assets\images\ads1.jpg" alt="Image 2"></div>
+      <div class="carousel-item"><img src="assets\images\ads2.jpg" alt="Image 3"></div>
+      <div class="carousel-item"><img src="assets\images\ads3.jpg" alt="Image 4"></div>
+      <div class="carousel-item"><img src="assets\images\ads4.jpg" alt="Image 5"></div>
+      <div class="carousel-item"><img src="assets\images\ads5.jpg" alt="Image 6"></div>
+  </div>
+  <button class="carousel-control prev" onclick="prevSlide('carousel1')">&#10094;</button>
+  <button class="carousel-control next" onclick="nextSlide('carousel1')">&#10095;</button>
+</div>
+<!---->
+
+  <div class="w3-container w3-text-grey">
+    <p style="text-align: center;">Powerbanks | Chargers | Earpices | Cords</p>
+  </div>
+
+  <!-- Product grid -->
+  <div class="w3-row">
+    <!--oraimo20,000mah and oraimo 10,000mah-->
+    <div class="w3-col l3 s6">
+      <div class="w3-container product-slideshow">
+          <!-- First image for the product -->
+          <a href="assets\images\oriamopb20k2.png" ><img class="slideshow-image" src="assets\images\oraimopb20k1.png" style="width:100%"></a>
+          <!-- Second image for the product -->
+          <a href="assets\images\oriamopb20k2.png"><img class="slideshow-image" src="assets\images\oraimopb20k3.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+          <div class="gadget" data-name="Oraimo 20,000mAh" data-spec="₦21,000" data-price="21000">
+              <p><b>Oraimo 20,000mAh</b><br>&#8358;21,000 <s style="opacity: 50%;">&#8358;23,000</s></p>
+              <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+              <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+          </div>
+      </div>
+      <div class="w3-container product-slideshow">
+          <!-- First image for the product -->
+          <a href="assets\images\oraimo10k2.png" ><img class="slideshow-image" src="assets\images\oraimopb10k1.png" style="width:100%"></a>
+          <!-- Second image for the product -->
+          <a href="assets\images\oraimo10k2.png"><img class="slideshow-image" src="assets\images\oraimo10k2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+          <div class="gadget" data-name="Oraimo 10,000mAh" data-spec="₦12,000" data-price="12000">
+              <p><b>Oraimo 10,000mAh</b><br>&#8358;12,000<s style="opacity: 50%; display: none;">&#8358;23,000</s></p>
+              <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+              <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+          </div>
+      </div>
+  </div>
+  <!--iphone cord & ace elec 20,000mah-->
+  <div class="w3-col l3 s6">
+    <div class="w3-container product-slideshow">
+        <!-- First image for the product -->
+        <a href="assets\images\iphonecord1.png" ><img class="slideshow-image" src="assets\images\iphonecord1.png" style="width:100%"></a>
+        <!-- Second image for the product -->
+        <a href="assets\images\iphonecord1.png"><img class="slideshow-image" src="assets\images\iphonecord3.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+        <div class="gadget" data-name="iPhone cord" data-spec="₦1,800" data-price="1800">
+            <p><b>iPhone cord</b><br>&#8358;1,800 <s style="opacity: 50%; display: none;">&#8358;23,000</s></p>
+            <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+            <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+        </div>
+    </div>
+    <div class="w3-container product-slideshow">
+        <!-- First image for the product -->
+        <a href="assets\images\acelec1.jpg" ><img class="slideshow-image" src="assets\images\acelec3.png" style="width:100%"></a>
+        <!-- Second image for the product -->
+        <a href="assets\images\acelec1.jpg"><img class="slideshow-image" src="assets\images\acelec2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+        <div class="gadget" data-name="Ace elec 20,000mAh" data-spec="₦16,000" data-price="16000">
+            <p><b>Ace elec 20,000mAh</b><br>&#8358;16,000 <s style="opacity: 50%;">&#8358;19,000</s></p>
+            <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+            <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+        </div>
+    </div>
+</div>
+<!--michpro 20,000mah and oraimo charger-->
+<div class="w3-col l3 s6">
+  <div class="w3-container product-slideshow">
+      <!-- First image for the product -->
+      <a href="assets\images\michpro2.png" ><img class="slideshow-image" src="assets\images\michpro1.png" style="width:100%"></a>
+      <!-- Second image for the product -->
+      <a href="assets\images\michpro2.png"><img class="slideshow-image" src="assets\images\michpro2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+      <div class="gadget" data-name="Michpro 20,000mAh" data-spec="₦19,000" data-price="19000">
+          <p><b>Michpro 20,000mAh</b><br>&#8358;19,000 <s style="opacity: 50%;">&#8358;20,500</s></p>
+          <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+          <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+      </div>
+  </div>
+  <div class="w3-container product-slideshow">
+      <!-- First image for the product -->
+      <a href="assets\images\oraimocharger3.png" ><img class="slideshow-image" src="assets\images\oraimocharger1.png" style="width:100%"></a>
+      <!-- Second image for the product -->
+      <a href="assets\images\oraimocharger3.png"><img class="slideshow-image" src="assets\images\oraimocharger2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+      <div class="gadget" data-name="Oraimo charger" data-spec="₦4,000" data-price="4000">
+          <p><b>Oraimo charger</b><br>&#8358;4,000 <s style="opacity: 50%; display: none;">&#8358;23,000</s></p>
+          <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+          <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+      </div>
+  </div>
+</div>
+<!--oraimo cord & oraimo type c-->
+<div class="w3-col l3 s6">
+  <div class="w3-container product-slideshow">
+      <!-- First image for the product -->
+      <a href="assets\images\oraimocord1.png" ><img class="slideshow-image" src="assets\images\oraimocord3.png" style="width:100%"></a>
+      <!-- Second image for the product -->
+      <a href="assets\images\oraimocord1.png"><img class="slideshow-image" src="assets\images\oraimocord2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+      <div class="gadget" data-name="Oraimo Cord" data-spec="₦1,500" data-price="1500">
+          <p><b>Oraimo Cord</b><br>&#8358;1,500 <s style="opacity: 50%; display: none;">&#8358;23,000</s></p>
+          <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+          <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+      </div>
+  </div>
+  <div class="w3-container product-slideshow">
+      <!-- First image for the product -->
+      <a href="assets\images\oraimotypec1.png" ><img class="slideshow-image" src="assets\images\oraimotypec1.png" style="width:100%"></a>
+      <!-- Second image for the product -->
+      <a href="assets\images\oraimotypec1.png"><img class="slideshow-image" src="assets\images\oraimotypec2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+      <div class="gadget" data-name="Oraimo type C" data-spec="₦2,000" data-price="2000">
+          <p><b>Oraimo type C</b><br>&#8358;2,000 <s style="opacity: 50%; display: none;">&#8358;23,000</s></p>
+          <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+          <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+      </div>
+  </div>
+</div>
+
+  
+
+
+  
+    <div class="carousel" id="carousel2">
+      <div class="carousel-inner">
+          <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+7" alt="post ads"></div>
+          <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+8" alt="post ads"></div>
+          <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+9" alt="post ads"></div>
+          <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+10" alt="post ads"></div>
+          <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+11" alt="post ads"></div>
+          <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+12" alt="post ads"></div>
+      </div>
+      <button class="carousel-control prev" onclick="prevSlide('carousel2')">&#10094;</button>
+      <button class="carousel-control next" onclick="nextSlide('carousel2')">&#10095;</button>
+    </div>
+
+ <!------------------------------------------------------------------------------------------->
+    <div class="w3-container w3-text-grey" id="jeans">
+      <p style="text-align: center;">Phone | Chargers | Earpices | Cords</p>
+    </div>
+  
+    <!-- Product grid -->
+     <!--Good bass & itel 20,000mah-->
+    <div class="w3-col l3 s6">
+      <div class="w3-container product-slideshow">
+          <!-- First image for the product -->
+          <a href="assets\images\goodbass2.png" ><img class="slideshow-image" src="assets\images\goodbass1.png" style="width:100%"></a>
+          <!-- Second image for the product -->
+          <a href="assets\images\goodbass2.png"><img class="slideshow-image" src="assets\images\goodbass3.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+          <div class="gadget" data-name="Good bass" data-spec="₦19,000" data-price="19000">
+              <p style="font-family: 'poppin', sans-serif"><b>Good Bass</b><br>&#8358;19,000 <s style="opacity: 50%;">&#8358;20,500</s></p>
+              <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+              <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+          </div>
+      </div>
+      <div class="w3-container product-slideshow">
+          <!-- First image for the product -->
+          <a href="assets\images\itelorign.png" ><img class="slideshow-image" src="assets\images\itel20k1.png" style="width:100%"></a>
+          <!-- Second image for the product -->
+          <a href="assets\images\itelorign.png"><img class="slideshow-image" src="assets\images\itelorign.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+          <div class="gadget" data-name="itel 20,000mAh" data-spec="₦20,000" data-price="20000">
+              <p><b>itel 20,000mAh</b><br>&#8358;20,000 <s style="opacity: 50%;">&#8358;22,000</s></p>
+              <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+              <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+          </div>
+      </div>
+  </div>
+  <!--Oraimo earpiece & MTN WiFi-->
+  <div class="w3-col l3 s6">
+    <div class="w3-container product-slideshow">
+        <!-- First image for the product -->
+        <a href="assets\images\oraimoep2.png" ><img class="slideshow-image" src="assets\images\oraimoep3.png" style="width:100%"></a>
+        <!-- Second image for the product -->
+        <a href="assets\images\oraimoep2.png"><img class="slideshow-image" src="assets\images\oraimoeps1.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+        <div class="gadget" data-name="Oraimo earpiece" data-spec="₦1,500" data-price="1500">
+            <p><b>Oraimo earpiece</b><br>&#8358;1,500 <s style="opacity: 50%; display: none;">&#8358;23,000</s></p>
+            <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+            <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+        </div>
+    </div>
+    <div class="w3-container product-slideshow">
+        <!-- First image for the product -->
+        <a href="assets\images\mtnwifi1.png" ><img class="slideshow-image" src="assets\images\mtnwifi3.jpg" style="width:100%"></a>
+        <!-- Second image for the product -->
+        <a href="assets\images\mtnwifi1.png"><img class="slideshow-image" src="assets\images\mtnwifi2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+        <div class="gadget" data-name="MTN Wifi" data-spec="₦24,000" data-price="24000">
+            <p><b>MTN WiFi</b><br>&#8358;24,000 <s style="opacity: 50%;">&#8358;26,000</s></p>
+            <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+            <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+        </div>
+    </div>
+</div>
+<!--MTN Router & Airtel WiFi-->
+<div class="w3-col l3 s6">
+  <div class="w3-container product-slideshow">
+      <!-- First image for the product -->
+      <a href="assets\images\mtnrouter3.png" ><img class="slideshow-image" src="assets\images\mtnrouter1.png" style="width:100%"></a>
+      <!-- Second image for the product -->
+      <a href="assets\images\mtnrouter3.png"><img class="slideshow-image" src="assets\images\mtnrouter2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+      <div class="gadget" data-name="MTN Router" data-spec="₦38,000" data-price="38000">
+          <p><b>MTN Router</b><br>&#8358;38,000 <s style="opacity: 50%;">&#8358;40,000</s></p>
+          <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+          <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+      </div>
+  </div>
+  <div class="w3-container product-slideshow">
+      <!-- First image for the product -->
+      <a href="assets\images\airtelwifi1.png" ><img class="slideshow-image" src="assets\images\airtelwifi3.png" style="width:100%"></a>
+      <!-- Second image for the product -->
+      <a href="assets\images\airtelwifi1.png"><img class="slideshow-image" src="assets\images\aitelwifi2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+      <div class="gadget" data-name="Airtel WiFi" data-spec="₦23,000" data-price="23000">
+          <p><b>Airtel WiFi</b><br>&#8358;23,000 <s style="opacity: 50%;">&#8358;25,000</s></p>
+          <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+          <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+      </div>
+  </div>
+</div>
+<!--Airtel Router & Small bass-->
+<div class="w3-col l3 s6">
+  <div class="w3-container product-slideshow">
+      <!-- First image for the product -->
+      <a href="assets\images\airtelrouter1.png" ><img class="slideshow-image" src="assets\images\airtelrouter3.png" style="width:100%"></a>
+      <!-- Second image for the product -->
+      <a href="assets\images\airtelrouter1.png"><img class="slideshow-image" src="assets\images\airtelrouter1.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+      <div class="gadget" data-name="Airtel Router" data-spec="₦37,000" data-price="37000">
+          <p><b>Airtel Router</b><br>&#8358;37,000 <s style="opacity: 50%;">&#8358;40,000</s></p>
+          <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+          <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+      </div>
+  </div>
+  <div class="w3-container product-slideshow">
+      <!-- First image for the product -->
+      <a href="assets\images\smallbass1.png" ><img class="slideshow-image" src="assets\images\smallbass1.png" style="width:100%"></a>
+      <!-- Second image for the product -->
+      <a href="assets\images\smallbass1.png"><img class="slideshow-image" src="assets\images\smallbass2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+      <div class="gadget" data-name="Small Bass MP" data-spec="₦9,000" data-price="9000">
+          <p><b>Small Bass MP</b><br>&#8358;9,000 <s style="opacity: 50%; display: none;">&#8358;23,000</s></p>
+          <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+          <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+      </div>
+  </div>
+</div>
+  
+      <div class="carousel" id="carousel3">
+        <div class="carousel-inner">
+            <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+13" alt="Image 13"></div>
+            <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+14" alt="Image 14"></div>
+            <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+15" alt="Image 15"></div>
+            <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+16" alt="Image 16"></div>
+            <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+17" alt="Image 17"></div>
+            <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+18" alt="Image 18"></div>
+        </div>
+        <button class="carousel-control prev" onclick="prevSlide('carousel3')">&#10094;</button>
+        <button class="carousel-control next" onclick="nextSlide('carousel3')">&#10095;</button>
+    </div>
+<!------------------------------------------------------------------------------->
+
+
+<!----------------------------------------------------------------------------------------------------->
+      <div class="w3-container w3-text-grey" id="jeans">
+        <p style="text-align: center;">Laptops | Chargers | Earpices | Cords</p>
+      </div>
+    
+      <!-- Product grid -->
+      <!--Earpod & EarX for iphone-->
+      <div class="w3-col l3 s6">
+        <div class="w3-container product-slideshow">
+            <!-- First image for the product -->
+            <a href="assets\images\earpod1.png" ><img class="slideshow-image" src="assets\images\earpod1.png" style="width:100%"></a>
+            <!-- Second image for the product -->
+            <a href="assets\images\earpod1.png"><img class="slideshow-image" src="assets\images\earpod2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+            <div class="gadget" data-name="Earpod" data-spec="₦7,500" data-price="7500">
+                <p><b>Earpod</b><br>&#8358;7,500 <s style="opacity: 50%; display: none;">&#8358;23,000</s></p>
+                <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+                <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+            </div>
+        </div>
+        <div class="w3-container product-slideshow">
+            <!-- First image for the product -->
+            <a href="assets\images\iphoneepios151.png" ><img class="slideshow-image" src="assets\images\iphoneepios151.png" style="width:100%"></a>
+            <!-- Second image for the product -->
+            <a href="assets\images\iphoneepios151.png"><img class="slideshow-image" src="assets\images\earxforiphone2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+            <div class="gadget" data-name="EarX for iPhone" data-spec="₦4,000" data-price="4000">
+                <p><b>EarX for iPhone</b><br>&#8358;4,000 <s style="opacity: 50%; display: none;">&#8358;23,000</s></p>
+                <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+                <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+            </div>
+        </div>
+    </div>
+    <!--iphone earpiece & iphone to type-c cord-->
+    <div class="w3-col l3 s6">
+      <div class="w3-container product-slideshow">
+          <!-- First image for the product -->
+          <a href="assets\images\iphoneeps1.png" ><img class="slideshow-image" src="assets\images\iphoneep2.png" style="width:100%"></a>
+          <!-- Second image for the product -->
+          <a href="assets\images\iphoneeps1.png"><img class="slideshow-image" src="assets\images\iphoneeps1.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+          <div class="gadget" data-name="iPhone earpiece" data-spec="₦2,500" data-price="2500">
+              <p><b>iPhone Earpice</b><br>&#8358;2,500 <s style="opacity: 50%; display: none;">&#8358;3,500</s></p>
+              <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+              <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+          </div>
+      </div>
+      <div class="w3-container product-slideshow">
+          <!-- First image for the product -->
+          <a href="assets\images\iphonetotypec1.png" ><img class="slideshow-image" src="assets\images\iphonetoc.png" style="width:100%"></a>
+          <!-- Second image for the product -->
+          <a href="assets\images\iphonetotypec1.png"><img class="slideshow-image" src="assets\images\iphonetotypec1.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+          <div class="gadget" data-name="iPhone to type-C" data-spec="₦3,000" data-price="3000">
+              <p><b>iPhone to USB-C</b><br>&#8358;3,000 <s style="opacity: 50%; display: none; display:none;">&#8358;23,000</s></p>
+              <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+              <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+          </div>
+      </div>
+  </div>
+<!--Mini fan & shplus type-c cord-->
+  <div class="w3-col l3 s6">
+    <div class="w3-container product-slideshow">
+        <!-- First image for the product -->
+        <a href="assets\images\minifan1.png" ><img class="slideshow-image" src="assets\images\minifan1.png" style="width:100%"></a>
+        <!-- Second image for the product -->
+        <a href="assets\images\minifan1.png"><img class="slideshow-image" src="assets\images\portablefan2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+        <div class="gadget" data-name="Portable fan" data-spec="₦7,500" data-price="7500">
+            <p><b>Portable Fan</b><br>&#8358;7,500 <s style="opacity: 50%; display: none;">&#8358;23,000</s></p>
+            <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+            <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+        </div>
+    </div>
+    <div class="w3-container product-slideshow">
+        <!-- First image for the product -->
+        <a href="assets\images\shplustypec1.png" ><img class="slideshow-image" src="assets\images\shplustypec1.png" style="width:100%"></a>
+        <!-- Second image for the product -->
+        <a href="assets\images\shplustypec1.png"><img class="slideshow-image" src="assets\images\shplustpyec2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+        <div class="gadget" data-name="Shplus usb-c" data-spec="₦1,800" data-price="1800">
+            <p><b>Shplus USB-C</b><br>&#8358;1,800 <s style="opacity: 50%; display: none;">&#8358;23,000</s></p>
+            <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+            <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+        </div>
+    </div>
+</div>
+<!--Shplus iphone cord & samsung earpiece-->
+<div class="w3-col l3 s6">
+  <div class="w3-container product-slideshow">
+      <!-- First image for the product -->
+      <a href="" ><img class="slideshow-image" src="assets\images\shplusiphonec1.png" style="width:100%"></a>
+      <!-- Second image for the product -->
+      <a href=""><img class="slideshow-image" src="assets\images\shplusiphonec2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+      <div class="gadget" data-name="Shplus iphone cord" data-spec="₦1,800" data-price="1800">
+          <p><b>Shplus iphone cord</b><br>&#8358;1,800 <s style="opacity: 50%; display: none;">&#8358;23,000</s></p>
+          <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+          <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+      </div>
+  </div>
+  <div class="w3-container product-slideshow">
+      <!-- First image for the product -->
+      <a href="assets\images\samsungep1.png" ><img class="slideshow-image" src="assets\images\samsungep1.png" style="width:100%"></a>
+      <!-- Second image for the product -->
+      <a href="assets\images\samsungep1.png"><img class="slideshow-image" src="assets\images\samsungep2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+      <div class="gadget" data-name="Samsung earpod" data-spec="₦12,000" data-price="12000">
+          <p><b>Samsung earpod</b><br>&#8358;12,000 <s style="opacity: 50%; ">&#8358;15,000</s></p>
+          <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+          <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+      </div>
+  </div>
+</div>
+    
+        <div class="carousel" id="carousel4">
+          <div class="carousel-inner">
+              <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+19" alt="Image 19"></div>
+              <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+20" alt="Image 20"></div>
+              <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+21" alt="Image 21"></div>
+              <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+22" alt="Image 22"></div>
+              <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+23" alt="Image 23"></div>
+              <div class="carousel-item"><img src="https://via.placeholder.com/600x300?text=Image+24" alt="Image 24"></div>
+          </div>
+          <button class="carousel-control prev" onclick="prevSlide('carousel4')">&#10094;</button>
+          <button class="carousel-control next" onclick="nextSlide('carousel4')">&#10095;</button>
+      </div>
+<!---------------------------------------------------------------------------------------------------->
+        <div class="w3-container w3-text-grey" id="jeans">
+          <p style="text-align: center;">Powerbanks | Chargers | Earpices | Cords</p>
+        </div>
+        <!--Zealot s67 &  flick type C-->
+        <!-- Product grid -->
+        <div class="w3-col l3 s6">
+          <div class="w3-container product-slideshow">
+              <!-- First image for the product -->
+              <a href="assets\images\zealot67mp1.png" ><img class="slideshow-image" src="assets\images\zealot67mp1.png" style="width:100%"></a>
+              <!-- Second image for the product -->
+              <a href="assets\images\zealot67mp1.png"><img class="slideshow-image" src="assets\images\zealots67n2.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+              <div class="gadget" data-name="Zealot S-67 MP" data-spec="₦72,000" data-price="72000">
+                  <p><b>Zealot s67</b><br>&#8358;72,000 <s style="opacity: 50%;">&#8358;75,000</s></p>
+                  <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+                  <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+              </div>
+          </div>
+          <div class="w3-container product-slideshow">
+              <!-- First image for the product -->
+              <a href="assets\images\flicktypec45w1.png" ><img class="slideshow-image" src="assets\images\flicktypec45w1.png" style="width:100%"></a>
+              <!-- Second image for the product -->
+              <a href="assets\images\flicktypec45w1.png"><img class="slideshow-image" src="assets\images\typeatoc1.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+              <div class="gadget" data-name="EarX for iPhone" data-spec="₦9,000" data-price="9000">
+                  <p><b>Flick USB-C</b><br>&#8358;9,000 <s style="opacity: 50%; display: none;">&#8358;23,000</s></p>
+                  <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+                  <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+              </div>
+          </div>
+      </div>
+
+      <div class="w3-col l3 s6">
+        <div class="w3-container product-slideshow">
+            <!-- First image for the product -->
+            <a href="images\oraimo10k2.png" ><img class="slideshow-image" src="..\images\oraimopb20k1.png" style="width:100%" alt=""></a>
+            <!-- Second image for the product -->
+            <a href="images\oraimo10k2.png"><img class="slideshow-image" src="images\oraimopb20k3.png" style="width:100%; display:none;" alt=""></a> <!-- Initially hidden -->
+            <div class="gadget" data-name="Oraimo 20,000mAh" data-spec="Quality." data-price="21000">
+                <p><u>Oraimo 20,000mAh</u><br><b>&#8358;21,000 </b><s style="opacity: 50%;">&#8358;23,000</s></p>
+                <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+                <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+            </div>
+        </div>
+        <div class="w3-container product-slideshow">
+            <!-- First image for the product -->
+            <a href="images\oraimocord2.png" ><img class="slideshow-image" src="images\oraimocord1.png" style="width:100%"></a>
+            <!-- Second image for the product -->
+            <a href="images\oraimocord2.png"><img class="slideshow-image" src="images\oraimocord3.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+            <div class="gadget" data-name="Oraimo 20,000mAh" data-spec="Quality." data-price="21000">
+                <p><u>Oraimo 20,000mAh</u><br><b>&#8358;21,000 </b><s style="opacity: 50%;">&#8358;23,000</s></p>
+                <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+                <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+            </div>
+        </div>
+    </div>
+
+    <div class="w3-col l3 s6">
+      <div class="w3-container product-slideshow">
+          <!-- First image for the product -->
+          <a href="images\oraimo10k2.png" ><img class="slideshow-image" src="..\images\oraimopb20k1.png" style="width:100%"></a>
+          <!-- Second image for the product -->
+          <a href="images\oraimo10k2.png"><img class="slideshow-image" src="images\oraimopb20k3.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+          <div class="gadget" data-name="Oraimo 20,000mAh" data-spec="Quality." data-price="21000">
+              <p><u>Oraimo 20,000mAh</u><br><b>&#8358;21,000 </b><s style="opacity: 50%;">&#8358;23,000</s></p>
+              <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+              <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+          </div>
+      </div>
+      <div class="w3-container product-slideshow">
+          <!-- First image for the product -->
+          <a href="images\oraimocord2.png" ><img class="slideshow-image" src="images\oraimocord1.png" style="width:100%"></a>
+          <!-- Second image for the product -->
+          <a href="images\oraimocord2.png"><img class="slideshow-image" src="images\oraimocord3.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+          <div class="gadget" data-name="Oraimo 20,000mAh" data-spec="Quality." data-price="21000">
+              <p><u>Oraimo 20,000mAh</u><br><b>&#8358;21,000 </b><s style="opacity: 50%;">&#8358;23,000</s></p>
+              <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+              <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+          </div>
+      </div>
+  </div>
+
+  <div class="w3-col l3 s6">
+    <div class="w3-container product-slideshow">
+        <!-- First image for the product -->
+        <a href="images\oraimo10k2.png" ><img class="slideshow-image" src="..\images\oraimopb20k1.png" style="width:100%"></a>
+        <!-- Second image for the product -->
+        <a href="images\oraimo10k2.png"><img class="slideshow-image" src="images\oraimopb20k3.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+        <div class="gadget" data-name="Oraimo 20,000mAh" data-spec="Quality." data-price="21000">
+            <p><u>Oraimo 20,000mAh</u><br><b>&#8358;21,000 </b><s style="opacity: 50%;">&#8358;23,000</s></p>
+            <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span></button>
+            <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+        </div>
+    </div>
+    <div class="w3-container product-slideshow">
+        <!-- First image for the product -->
+        <a href="images\oraimocord2.png" ><img class="slideshow-image" src="images\oraimocord1.png" style="width:100%"></a>
+        <!-- Second image for the product -->
+        <a href="images\oraimocord2.png"><img class="slideshow-image" src="images\oraimocord3.png" style="width:100%; display:none;"></a> <!-- Initially hidden -->
+        <div class="gadget" data-name="Oraimo 20,000mAh" data-spec="Quality." data-price="21000">
+            <p><u>Oraimo 20,000mAh</u><br><b>&#8358;21,000 </b><s style="opacity: 50%;">&#8358;23,000</s></p>
+            <button class="select-gadget play-audio" data-audio-src="https://vocaroo.com/embed/113zooXBdnDH?autoplay=1"><b>Add</b><span style="visibility: hidden;">i</span> </button>
+            <button class="remove-gadget play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"><i class="fas fa-times"></i><span style="visibility: hidden;">i</span></button>
+        </div>
+    </div>
+</div>       
+  </div>
+  
+  <div class="star-container">
+    <div class="star"></div>
+    <p class="quality-text" id="notee" onclick="change()">iTechx</p>
+  </div>
+
+  <!--Calculator-->
+  <div id="calculator">
+    
+    <span class="cancel-icon" id="cancel-icon"><b class="fa fa-remove play-audio" data-audio-src="https://vocaroo.com/embed/1cJR3GDpdCO1?autoplay=1"></b></span><b class="iaas">iTechx<b class="ono">more</b></b>
+    <p><b>Order Summary</b></p>
+    <div id="order-summary">No gadgets selected.</div>
+    <div id="total-price">Total: ₦0</div>
+    <a id="whatsapp-link" href="#" target="_blank" class="play-audio" data-audio-src="https://vocaroo.com/embed/1nFamjRUNVJv?autoplay=1">Check out</a>
+</div>
+
+  <!-- Subscribe section -->
+  <div class="w3-container w3-black w3-padding-32">
+    <h1>Subscribe</h1>
+    <p>To get special offers and VIP treatment:</p>
+    <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail" style="width:100%"></p>
+    <button type="button" class="w3-button w3-red w3-margin-bottom" onclick="myFunction5()" style="background-color:#0055cc !important;">Subscribe</button>
+  </div>
+  
+  <!-- Footer -->
+  <footer class="w3-padding-64 w3-light-grey w3-small w3-center" id="footer" >
+    <div class="w3-row-padding">
+      <div class="w3-col s4" style="color: black; background: gray;">
+        <h4>Contact</h4>
+        <p>Questions? Go ahead.</p>
+
+      </div>
+      <!---->
+
+      <!---->
+      <div class="w3-col s4">
+        <h4>About</h4>
+        <p><a href="#">About us</a></p>
+        <p><a href="#">We're hiring</a></p>
+        <p><a href="#">Support</a></p>
+        <p><a href="#">Find store</a></p>
+        <p><a href="#">Shipment</a></p>
+        <p><a href="#">Payment</a></p>
+        <p><a href="#">Gift card</a></p>
+        <p><a href="#">Return</a></p>
+        <p><a href="#">Help</a></p>
+      </div>
+
+      <div class="w3-col s4 w3-justify">
+        <h4>Store</h4>
+        <p><i class="fa fa-fw fa-map-marker"></i> iTechx</p>
+        <p><i class="fa fa-fw fa-phone"></i> +2347038490327</p>
+        <p><i class="fa fa-fw fa-envelope"></i> israelchidozie3<br>@gmail.com</p>
+        <h4>We accept</h4>
+        <p><i class="fa fa-fw fa-cc-amex"></i> Amex</p>
+        <p><i class="fa fa-fw fa-credit-card"></i> Credit Card</p>
+        <br>
+        <i class="fa fa-facebook-official w3-hover-opacity w3-large"></i>
+        <i class="fa fa-instagram w3-hover-opacity w3-large"></i>
+        <i class="fa fa-snapchat w3-hover-opacity w3-large"></i>
+        <i class="fa fa-pinterest-p w3-hover-opacity w3-large"></i>
+        <i class="fa fa-twitter w3-hover-opacity w3-large"></i>
+        <i class="fa fa-linkedin w3-hover-opacity w3-large"></i>
+      </div>
+    </div>
+  </footer>
+
+  <div class="w3-black w3-center w3-padding-24">@copywrite <a href="https://www.w3schools.com/spaces" title="W3.CSS" target="_blank" class="w3-hover-opacity">All rights reserved</a></div>
+
+  <!-- End page content -->
+</div>
+
+<!-- Newsletter Modal -->
+<div id="newsletter" class="w3-modal">
+  <div class="w3-modal-content w3-animate-zoom" style="padding:32px">
+    <div class="w3-container w3-white w3-center">
+      <i onclick="document.getElementById('newsletter').style.display='none'" class="fa fa-remove w3-right w3-button w3-transparent w3-xxlarge"></i>
+      <h2 class="w3-wide">NEWSLETTER</h2>
+      <p>Join our mailing list to receive updates on new arrivals and special offers.</p>
+      <p><input class="w3-input w3-border" type="text" placeholder="Enter e-mail"></p>
+      <button type="button" class="w3-button w3-padding-large w3-red w3-margin-bottom" onclick="document.getElementById('newsletter').style.display='none'">Subscribe</button>
+    </div>
+  </div>
+</div>
+
+<!----------------------------------------------------------------->
+<script type="text/javascript"
+src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<!----------------------------------------------------------------->
+<script>
+
+  let clickCounter = 0;
+  let usedColors = [];
+  const colorList = [
+      'red', 'blue', 'green', 'purple', 'orange', 'pink', 'cyan', 'lime', 
+      'brown', 'magenta', 'gold', 'silver', 'teal', 'violet', 'coral', 
+      'navy', 'maroon', 'olive', 'salmon', 'plum', 'khaki', 'aqua', 'fuchsia', 
+      'indigo', 'chocolate', 'orchid', 'tan', 'peru', 'crimson', 'lavender', 
+      'darkgreen', 'darkblue', 'lightblue', 'lightgreen', 'peachpuff', 
+      'rosybrown', 'sienna', 'slateblue', 'tomato', 'wheat', 'yellowgreen',
+      'lightsalmon', 'mediumslateblue', 'slategray', 'darkorange', 'forestgreen'
+  ];
+  
+  const originalPos = { top: 100, left: 100 }; // Save initial position
+  
+  function getRandomColor() {
+      let newColor;
+      do {
+          newColor = colorList[Math.floor(Math.random() * colorList.length)];
+      } while (usedColors.includes(newColor));
+      usedColors.push(newColor);
+      return newColor;
+  }
+  
+  function changeColorAndMove(button) {
+      if (clickCounter === 50) return;
+  
+      clickCounter++;
+  
+      const selectedColor = getRandomColor();
+      button.style.backgroundColor = selectedColor;
+  
+      // Document size for random movement
+      const docHeight = document.documentElement.scrollHeight;
+      const docWidth = document.documentElement.scrollWidth;
+  
+      const randomX = Math.floor(Math.random() * (docWidth - 50));  // Button width
+      const randomY = Math.floor(Math.random() * (docHeight - 50)); // Button height
+  
+      button.classList.add('hidden-btn');
+  
+      // Delay for repositioning and showing the button again
+      setTimeout(() => {
+          button.style.left = `${randomX}px`;
+          button.style.top = `${randomY}px`;
+          button.classList.remove('hidden-btn');
+      }, 1000);
+  
+      if (clickCounter === 50) {
+          button.classList.add('disabled-btn');
+          button.style.left = `${originalPos.left}px`;
+          button.style.top = `${originalPos.top}px`;
+          button.innerHTML = "<i class='fas fa-dollar-sign'></i> Disabled";
+      }
+  }
+  
+  window.onload = function() {
+      const button = document.querySelector('.circle-btn');
+      originalPos.top = button.offsetTop;
+      originalPos.left = button.offsetLeft;
+  };
+  ///////////////////////////////////////////////
+
+// Accordion 
+function myAccFunc() {
+  var x = document.getElementById("demoAcc");
+  if (x.className.indexOf("w3-show") == -1) {
+    x.className += " w3-show";
+  } else {
+    x.className = x.className.replace(" w3-show", "");
+  }
+}
+
+
+
+
+// Open and close sidebar
+function w3_open() {
+  document.getElementById("mySidebar").style.display = "block";
+  document.getElementById("myOverlay").style.display = "block";
+}
+ 
+function w3_close() {
+  document.getElementById("mySidebar").style.display = "none";
+  document.getElementById("myOverlay").style.display = "none";
+}
+
+/////
+
+function showSlide(carouselId, index) {
+  const carouselInner = document.querySelector(`#${carouselId} .carousel-inner`);
+  const totalSlides = carouselInner.children.length;
+  let currentSlide = index;
+
+  if (index >= totalSlides) {
+      currentSlide = 0;
+  } else if (index < 0) {
+      currentSlide = totalSlides - 1;
+  }
+
+  carouselInner.style.transform = `translateX(-${currentSlide * 100}%)`;
+  return currentSlide; // Return current slide index for further reference
+}
+
+function nextSlide(carouselId) {
+  const currentSlide = showSlide(carouselId, getCurrentSlideIndex(carouselId) + 1);
+}
+
+function prevSlide(carouselId) {
+  const currentSlide = showSlide(carouselId, getCurrentSlideIndex(carouselId) - 1);
+}
+
+function getCurrentSlideIndex(carouselId) {
+  const carouselInner = document.querySelector(`#${carouselId} .carousel-inner`);
+  const transformValue = getComputedStyle(carouselInner).transform;
+  const matrix = new WebKitCSSMatrix(transformValue);
+  return Math.abs(matrix.m41 / (carouselInner.clientWidth || 1)); // Use the client width to avoid division by zero
+}
+
+// Automatically scroll every 3 seconds for each carousel
+const carousels = ['carousel1', 'carousel2', 'carousel3', 'carousel4'];
+carousels.forEach(carousel => {
+  setInterval(() => nextSlide(carousel), 3000);
+});
+
+////////////////////////////////////////////////////////////////////////////////
+let selectedGadgets = {};
+let totalPrice = 0;
+
+function updateOrderSummary() {
+    const summary = document.getElementById('order-summary');
+    if (Object.keys(selectedGadgets).length === 0) {
+        summary.innerHTML = 'No gadgets selected.';
+        totalPrice = 0;
+    } else {
+        summary.innerHTML = '';
+        for (const [name, details] of Object.entries(selectedGadgets)) {
+            summary.innerHTML += `<span class="product-name">${name}</span> <span class="product-quantity">(Quantity: ${details.quantity})</span><br>`;
+        }
+    }
+    document.getElementById('total-price').innerText = `Total: ₦${totalPrice}`;
+}
+
+function updateWhatsAppLink() {
+    const baseUrl = 'https://wa.me/+2347038490327?text=';
+    let message = 'I would like to inquire about the following gadgets:\n';
+
+    for (const [name, details] of Object.entries(selectedGadgets)) {
+        message += `${name} (Quantity: ${details.quantity}) - Specs: ${details.specs}\n`;
+    }
+    message += `Total Price: ₦${totalPrice}`;
+
+    const whatsappLink = baseUrl + encodeURIComponent(message);
+    document.getElementById('whatsapp-link').href = whatsappLink;
+}
+
+document.querySelectorAll('.select-gadget').forEach(button => {
+    button.addEventListener('click', function() {
+        const gadget = this.parentElement;
+        const name = gadget.getAttribute('data-name');
+        const specs = gadget.getAttribute('data-spec');
+        const price = parseFloat(gadget.getAttribute('data-price'));
+
+        // Check if the gadget has already been selected
+        if (selectedGadgets[name]) {
+            selectedGadgets[name].quantity += 1; // Increase quantity
+            totalPrice += price; // Update total price
+        } else {
+            selectedGadgets[name] = { specs: specs, quantity: 1, price: price }; // Add new gadget
+            totalPrice += price; // Update total price
+        }
+
+        // Update WhatsApp link and order summary
+        updateWhatsAppLink();
+        updateOrderSummary();
+
+        // Show calculator if items are selected
+        document.getElementById('calculator').style.display = 'block';
+        document.getElementById('cancel-icon').style.display = 'block'; // Show cancel icon
+    });
+});
+
+document.querySelectorAll('.remove-gadget').forEach(button => {
+    button.addEventListener('click', function() {
+        const gadget = this.parentElement;
+        const name = gadget.getAttribute('data-name');
+        const price = parseFloat(gadget.getAttribute('data-price'));
+
+        if (selectedGadgets[name]) {
+            selectedGadgets[name].quantity -= 1; // Decrease quantity
+            totalPrice -= price; // Update total price
+
+            // Remove gadget from selectedGadgets if quantity reaches zero
+            if (selectedGadgets[name].quantity === 0) {
+                delete selectedGadgets[name];
+            }
+
+            // Update WhatsApp link and order summary
+            updateWhatsAppLink();
+            updateOrderSummary();
+
+            // Hide calculator if no items are selected
+            if (Object.keys(selectedGadgets).length === 0) {
+                document.getElementById('calculator').style.display = 'none';
+                document.getElementById('cancel-icon').style.display = 'none'; // Hide cancel icon
+            }
+        }
+    });
+});
+
+document.getElementById('cancel-icon').addEventListener('click', function() {
+    selectedGadgets = {}; // Clear selected gadgets
+    totalPrice = 0; // Reset total price
+    updateOrderSummary(); // Update summary
+    document.getElementById('calculator').style.display = 'none'; // Hide calculator
+    this.style.display = 'none'; // Hide cancel icon
+});
+
+function convertToXPCode(total) {
+  // Convert total to hexadecimal
+  let hexCode = total.toString(16).toUpperCase();
+
+  // Replace the hexadecimal characters with the custom characters
+  hexCode = hexCode.replace(/A/g, 'i')
+                   .replace(/B/g, 'T')
+                   .replace(/C/g, 'e')
+                   .replace(/D/g, 'c')
+                   .replace(/E/g, 'h')
+                   .replace(/F/g, 'X');
+
+  return hexCode;
+}
+
+function updateWhatsAppLink() {
+  const baseUrl = 'https://wa.me/+2347038490327?text=';
+  let message = '*iTechx*\nI would like to inquire about the following gadgets:\n';
+
+  for (const [name, details] of Object.entries(selectedGadgets)) {
+      message += `*${name}* (Quantity: *${details.quantity}*) - Specs: ${details.specs}\n`;
+  }
+
+  const xpCode = convertToXPCode(totalPrice); // Convert total to XP code
+  message += `*Total Price:* ₦${totalPrice}\n*XP Code:* ${xpCode}`; // Add XP code
+
+  const whatsappLink = baseUrl + encodeURIComponent(message);
+  document.getElementById('whatsapp-link').href = whatsappLink;
+}
+
+
+// Drag functionality for calculator
+const calculator = document.getElementById('calculator');
+let isDragging = false;
+let offsetX, offsetY;
+
+calculator.addEventListener('mousedown', (e) => {
+    isDragging = true;
+    offsetX = e.clientX - calculator.getBoundingClientRect().left;
+    offsetY = e.clientY - calculator.getBoundingClientRect().top;
+    calculator.style.cursor = 'grabbing'; // Change cursor during dragging
+});
+
+document.addEventListener('mousemove', (e) => {
+    if (isDragging) {
+        calculator.style.left = `${e.clientX - offsetX}px`;
+        calculator.style.top = `${e.clientY - offsetY}px`;
+    }
+});
+
+document.addEventListener('mouseup', () => {
+    isDragging = false;
+    calculator.style.cursor = 'move'; // Reset cursor when not dragging
+});
+
+// Prevent default context menu on long press
+calculator.addEventListener('contextmenu', (e) => {
+    e.preventDefault();
+});
+
+
+
+
+////////////////////////////////////////////////////////////////
+
+// This script should be placed before the closing </body> tag
+document.querySelectorAll('.play-audio').forEach(button => {
+  button.addEventListener('click', function() {
+      var audioSrc = this.getAttribute('data-audio-src');
+      var audioFrame = document.getElementById('audioFrame');
+
+      audioFrame.src = audioSrc;
+
+      // Stop the audio after 1 second
+      setTimeout(function() {
+          audioFrame.src = ""; // Reset the src to stop the audio
+      }, 1000); // 1000 milliseconds = 1 second
+  });
+});
+
+
+
+///////////////////////////////////////////////////////
+emailjs.init("rOP2YP5jcGMsPXc9y");
+
+        const btn = document.getElementById('button');
+
+        /////////////////////////////////////////////
+// Function to update the hidden input field whenever the visitor count changes
+function updateVisitorCount() {
+    const visitorCount = document.getElementById('visitor-count').innerText;
+    document.getElementById('visitor-count-hidden').value = visitorCount;
+}
+
+// Call the function every time there's a change or at a set interval
+setInterval(updateVisitorCount, 1000); // Updates every second
+
+
+
+        //////////////////////////////////////////////////////
+        document.getElementById('form').addEventListener('submit', function(event) {
+            event.preventDefault();
+        
+            // Change the button text to indicate sending
+            const btn = document.getElementById('button');
+            btn.value = 'Sending...';
+        
+            // Get the visitor count from the div
+            const visitorCount = document.getElementById('visitor-count').innerText;
+        
+            // Set the visitor count into the hidden input field
+            document.getElementById('visitor-count-hidden').value = visitorCount;
+        
+            // Define EmailJS service and template IDs
+            const serviceID = 'service_07x00a5';
+            const templateID = 'template_hjmiuwm';
+        
+            // Send form with EmailJS
+            emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    // Reset button text after success
+                    btn.value = 'Register';
+                    alert('Form submitted successfully!');
+        
+                    // Automatically click the reset button
+                    document.getElementById('reset-btn').click();
+                }, (err) => {
+                    // Reset button text after failure
+                    btn.value = 'Register';
+                    alert('Failed to submit form: ' + JSON.stringify(err));
+                });
+        });
+        
+        ////////////////////////////////////////////
+
+        // Function to show the form and overlay
+        function showForm() {
+            document.getElementById('form').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        // Function to hide the form and overlay
+        function hideForm() {
+            document.getElementById('form').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        // Function to show stored data section
+        function showStoredData() {
+            const formData = JSON.parse(localStorage.getItem('formData'));
+
+            if (formData) {
+                document.getElementById('stored-name').innerHTML = `<b>Name:</b> ${formData.name}`;
+                document.getElementById('stored-email').innerHTML = `<b>Email:</b> ${formData.email}`;
+                document.getElementById('stored-phone').innerHTML = `<b>Phone:</b> ${formData.phone}`;
+                document.getElementById('stored-isubz').innerHTML = `<b>iSubz Wallet ID:</b> ${formData.isubz}`;
+                document.getElementById('stored-account').innerHTML = `<b>iSubz ACC NO:</b> ${formData.account}`;
+                document.getElementById('stored-visit-count').innerHTML = `Visits: ${formData.visitCount}`;
+                document.getElementById('stored-points').innerHTML = `Points: ${formData.points}`;
+            } else {
+                document.getElementById('stored-name').innerText = 'No data found!';
+                document.getElementById('stored-email').innerText = '';
+                document.getElementById('stored-phone').innerText = '';
+                document.getElementById('stored-isubz').innerText = '';
+                document.getElementById('stored-account').innerText = '';
+                document.getElementById('stored-visit-count').innerText = '';
+                document.getElementById('stored-points').innerText = '';
+            }
+
+            document.getElementById('stored-data').style.display = 'block';
+            document.getElementById('overlay').style.display = 'block';
+        }
+
+        // Function to hide stored data section
+        function hideStoredData() {
+            document.getElementById('stored-data').style.display = 'none';
+            document.getElementById('overlay').style.display = 'none';
+        }
+
+        // Submit form data and store in localStorage
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const phone = document.getElementById('phone').value;
+            const isubz = document.getElementById('isubz').value;
+            const account = document.getElementById('account').value;
+
+            const formData = {
+                name: name,
+                email: email,
+                phone: phone,
+                isubz: isubz,
+                account: account,
+                visitCount: localStorage.getItem('visitCount') || 1,
+                points: 100 // Assuming some default points value
+            };
+
+            localStorage.setItem('formData', JSON.stringify(formData));
+
+            hideForm();
+        });
+
+        // Track visitor count
+       ///////////////////////////////////////////////////////////////////
+
+       window.addEventListener('load', function () {
+        let visitCount = parseFloat(localStorage.getItem('visitCount')) || 0;
+    
+        // Increment visit count by 3.2 on page load
+        visitCount += 3.2;
+        localStorage.setItem('visitCount', visitCount);
+        document.querySelectorAll('.visitor-count').forEach(element => {
+            element.innerHTML = `<b>Bonus Point:</b> ${visitCount.toFixed(2)}`;
+        });
+    
+        // Set up timer for incrementing by 0.0625 every second
+        let timeSpent = 0;
+        let interval = setInterval(function () {
+            visitCount += 0.0625;
+            localStorage.setItem('visitCount', visitCount);
+            document.querySelectorAll('.visitor-count').forEach(element => {
+                element.innerHTML = `<b>Bonus Point:</b> ${visitCount.toFixed(2)}`;
+            });
+            timeSpent++;
+        }, 1000);  // increments every second
+    
+        // Increase count by 1.015 on any click event
+        document.querySelectorAll('.ad-link').forEach(function(ad) {
+            ad.addEventListener('click', function () {
+                visitCount += 13.015; // Increment the points
+                localStorage.setItem('visitCount', visitCount); // Save to localStorage
+                document.querySelectorAll('.visitor-count').forEach(element => {
+                    element.innerHTML = `<b>Bonus Point:</b> ${visitCount.toFixed(2)}`;
+                });
+            });
+        });
+    
+        // Handle the user leaving before 15 seconds
+        window.addEventListener('beforeunload', function () {
+            if (timeSpent < 15) {
+                visitCount -= 11.12; // Subtract 11.12 if user stays less than 15 seconds
+                localStorage.setItem('visitCount', visitCount);
+            }
+        });
+    
+        // Reset visit count to 0 when secret button is clicked
+        document.getElementById('reset-btn').addEventListener('click', function () {
+            visitCount = 0;
+            localStorage.setItem('visitCount', visitCount);
+            document.querySelectorAll('.visitor-count').forEach(element => {
+                element.innerHTML = `<b>Bonus Point:</b> ${visitCount.toFixed(2)}`;
+            });
+        });
+    
+        // Reveal the secret button when 'Ctrl + Shift + U' is pressed (for desktop users)
+        document.addEventListener('keydown', function (event) {
+            if (event.ctrlKey && event.shiftKey && event.key === 'U') {
+                document.getElementById('reset-btn').style.display = 'block';
+            }
+        });
+    
+        ///////////////////////////////////////////////////
+        let resultValue = visitCount;
+        localStorage.setItem('sharedResult', resultValue);
+    
+        window.sharedResult = resultValue;
+        //////////////////////////////////////////////////
+    
+        // Long press functionality for touchscreen devices
+        let pressTimer;
+        document.addEventListener('touchstart', function (event) {
+            pressTimer = setTimeout(function () {
+                document.getElementById('reset-btn').style.display = 'block';
+            }, 5000);  // 5-second long press reveals the button
+        });
+    
+        document.addEventListener('touchend', function (event) {
+            clearTimeout(pressTimer);  // Clear timer if the user doesn't press long enough
+        });
+    });
+    
+    
+        ///////////////////////////////////////////////////////////////////////
+        document.getElementById('form').addEventListener('submit', function(e) {
+            // Prevent the form from submitting instantly
+            e.preventDefault();
+        
+            // Get the visitor count from the div
+            const visitorCount = document.getElementById('visitor-count').innerText;
+            
+            // Set the visitor count into the hidden input field
+            document.getElementById('visitor-count-hidden').value = visitorCount;
+        
+            // Now submit the form through EmailJS or however you’re handling form submission
+            emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
+                .then(function() {
+                    console.log('SUCCESS!');
+                }, function(error) {
+                    console.log('FAILED...', error);
+                });
+        });
+        
+
+        /////////////////////////////////////////////////////////////////
+
+        function toggleSidebar() {
+          const sidebar = document.getElementById('mySidebar');
+          sidebar.classList.toggle('open');
+        }
+      
+        function toggleSubMenu(element) {
+          element.classList.toggle('open');
+        }
+
+        /////////////////////////////////////////////////
+        let slideIndex = 0;
+  showSlides();
+
+  function showSlides() {
+    let slides = document.getElementsByClassName("mySlides");
+    for (let i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {
+      slideIndex = 1;
+    }
+    slides[slideIndex - 1].style.display = "block";
+    setTimeout(showSlides, 5000); // Change image every 5 seconds
+  }
+  //////////////////////////////////////////////////////////////
+  // Wait for the DOM content to fully load before running the slideshow
+  document.addEventListener('DOMContentLoaded', function () {
+    function productSlideshow() {
+        // Get all the product slideshow containers
+        const slideshows = document.querySelectorAll('.product-slideshow');
+        
+        slideshows.forEach(function (slideshow) {
+            // Get the two images inside each slideshow
+            const images = slideshow.querySelectorAll('.slideshow-image');
+            
+            let currentImageIndex = 0;
+            
+            // Set an interval to alternate the images every 5 seconds
+            setInterval(function () {
+                // Hide both images
+                images[0].style.display = 'none';
+                images[1].style.display = 'none';
+                
+                // Show the next image in the sequence
+                currentImageIndex = (currentImageIndex + 1) % images.length;
+                images[currentImageIndex].style.display = 'block';
+            }, 5000);
+        });
+    }
+
+    // Call the product slideshow function
+    productSlideshow();
+});
+
+// Start the slideshow when the page loads
+window.onload = productSlideshow;
+
+
+/////////////////////////////////////////////////
+
+
+//////////////////////////////
+function myFunction5() {
+  alert("Subscribed");
+}
+
+/////////////////////////////////////
+function toggleDarkMode() {
+  // Toggle dark mode class on body
+  document.body.classList.toggle("dark-mode");
+
+  // Change the icon from moon to sun and vice versa
+  var icon = document.getElementById("darkModeToggle");
+  if (document.body.classList.contains("dark-mode")) {
+      icon.classList.remove("fa-moon");
+      icon.classList.add("fa-sun");
+  } else {
+      icon.classList.remove("fa-sun");
+      icon.classList.add("fa-moon");
+  }
+}
+function change() {
+  document.getElementById("notee").innerHTML = "Go Techy!";
+  alert("Go Techy")
+}
+// do for logo
+///////////////
+</script>
+</body>
+</html>
